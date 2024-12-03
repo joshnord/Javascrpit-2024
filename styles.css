@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
+
+
+body{
+    background-color: red
+
+}
+header{
+    background-color: dodgerblue;
+    font-size: 2em;
+    color: rgb(173, 173, 77);
+    text-align: center;
+    text-decoration: overline;
+}
+
+h1{
+    background-color: orange;
+    font-size: 12em;
+    color: rgb(12, 145, 254);
+    text-align: right;
+    font-family: "Sixtyfour Convergence", sans-serif;
+    text-decoration: underline overline;
+
+    
+}
+
+h2{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 0, 0);
+    text-decoration: line-through;
+
+}
+
+h3{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 0);
+    border-width: 100px 50px 10px 5px;
+    border-color: red;
+
+}
+
+h4{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 255);
+    padding-top: 8px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    padding-left: 2px;
+
+}
+
+
+h5{
+    width: 400px;
+    padding: 5px;
+    margin: 3px;
+    padding: 5px 10px;
+    background-color: rgb(157, 36, 36);
+
+    border: 2px solid rgb(200, 180, 240);
+    box-sizing: border-box;
+}
+
+h6{
+    width: 400px;
+    padding: 5px 10px 200px 5px;
+    margin: 50px;
+    text-align: center;
+    background-color: rgb(35, 168, 216);
+    color:rgb(255, 183, 0);
+    border-top: 20px solid rgb(200, 180, 240);
+    border-right: 23px solid rgb(240, 180, 236);
+    
+}
+
+h7{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 0, 255);
+    font-family: "Sixtyfour Convergence", sans-serif;
+
+}
+
+h8{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 255, 255);
+
+}
+
+a{
+    background-color: rgb(2, 2, 7);
+    color: rgb(10, 200, 5);
+    text-decoration: none;
+}
