@@ -97,3 +97,8 @@ a{
     color: rgb(10, 200, 5);
     text-decoration: none;
 }
+
+img{
+    float: left;
+
+}
