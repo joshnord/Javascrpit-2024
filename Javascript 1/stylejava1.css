@@ -25,7 +25,11 @@ h1{
 h2{
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(255, 0, 0);
-    text-decoration: line-through;
-
+    color: rgb(47, 13, 13);
+    text-decoration: underline overline;
+    font-size: 6em;
+    text-align: center;
+    margin: 50px;
+    border: rgb(10, 255, 35);
+    padding: 10px;
 }

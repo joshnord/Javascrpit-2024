@@ -63,8 +63,7 @@ function greet(){
 
 }
 
-
-
+var total = 0;
 var number;
 window.onload = function(){
     //happens after the page has loaded (it may not know the element exists)
@@ -74,9 +73,10 @@ window.onload = function(){
 
 function count(){
     console.log (number.value);
-    number.value = parseInt(number.value) + 1;
-    console.log (number.value);
-    // numberCountt.value = number;
+    total = parseInt(number.value) + total;
+    console.log (total);
+    var hTwo = document.querySelector("h2");
+    hTwo.innerText = total;
 }
 
 
