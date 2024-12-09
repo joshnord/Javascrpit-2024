@@ -64,13 +64,21 @@ function greet(){
 }
 
 
-function count(){
-    var numberCount = document.querySelector("numberCountt");
-    console.log (numberCount);
-    numberCount = numberCount + 1;
-    console.log (numberCount);
-    var myCount = document.querySelector("#numberCountt");
-    myCount.innerText = numberCount;
+
+var number;
+window.onload = function(){
+    //happens after the page has loaded (it may not know the element exists)
+    number = document.querySelector("#numberCountt");
 }
-    
-    
+
+
+function count(){
+    console.log (number.value);
+    number.value = parseInt(number.value) + 1;
+    console.log (number.value);
+    // numberCountt.value = number;
+}
+
+
+
+
