@@ -27,9 +27,15 @@ h2{
     font-family: 'Times New Roman', Times, serif;
     color: rgb(47, 13, 13);
     text-decoration: underline overline;
-    font-size: 6em;
+    font-size: 2em;
     text-align: center;
     margin: 50px;
     border: rgb(10, 255, 35);
     padding: 10px;
+}
+
+label{
+    margin: 10px;
+    padding-bottom: 3px;
+    background-color: white; 
 }
