@@ -35,32 +35,34 @@ if (conv == "celsius"){
     console.log ("new impValue = " + impValue);
 
     var hTwo = document.querySelector("h2");
-    hTwo.innerText = valueBox.value + " Degrees Fahrenheit = " + metValue + " Degrees Celsius" +"\n"+ valueBox.value + " Degrees Celsius = " + impValue + " Degrees Fahrenheit";
+    hTwo.innerText = valueBox.value + " Degrees Fahrenheit = " + metValue.toFixed(1) + " Degrees Celsius" +"\n"+ valueBox.value + " Degrees Celsius = " + impValue.toFixed(1) + " Degrees Fahrenheit";
+// I want to make "# of decimal places" a feild and put it into "metValue.toFixed(1)"      
+// or, harder still, to take # of decimal places from "valueBox.value"
 }
 
 if (conv == "kilo"){
     console.log ("option = " + conv);
 
-    metValue = parseInt(valueBox.value) + 7;
-    impValue = parseInt(valueBox.value) - 7;
+    metValue = parseInt(valueBox.value) * 0.453592;
+    impValue = parseInt(valueBox.value) / 0.453592;
 
     console.log ("new metValue = " + metValue);
     console.log ("new impValue = " + impValue);
 
     var hTwo = document.querySelector("h2");
-    hTwo.innerText = valueBox.value + " Pounds = " + metValue + " Kilograms" + "\n" + valueBox.value + "Kilograms = " + impValue + " Pounds";
+    hTwo.innerText = valueBox.value + " Pounds = " + metValue.toFixed(1) + " Kilograms" + "\n" + valueBox.value + " Kilograms = " + impValue.toFixed(1) + " Pounds";
 }
 
 if (conv == "liter"){
     console.log ("option = " + conv);
 
-    metValue = parseInt(valueBox.value) + 6;   
-    impValue = parseInt(valueBox.value) - 6;
+    metValue = parseInt(valueBox.value) * 3.78541;   
+    impValue = parseInt(valueBox.value) / 3.78541;
 
     console.log ("new metValue = " + metValue);
     console.log ("new impValue = " + impValue);
 
     var hTwo = document.querySelector("h2");
-    hTwo.innerText = valueBox.value + " Gallons = " + metValue + " Liters" + "\n" + valueBox.value + " Liters = " + impValue + " Gallons";
+    hTwo.innerText = valueBox.value + " US Gallons = " + metValue.toFixed(1) + " Liters" + "\n" + valueBox.value + " Liters = " + impValue.toFixed(1) + " US Gallons";
 }}
 

@@ -1,0 +1,41 @@
+
+body{
+    background-color: red
+
+}
+header{
+    background-color: dodgerblue;
+    font-size: 2em;
+    color: rgb(173, 173, 77);
+    text-align: center;
+    text-decoration: overline;
+}
+
+h1{
+    background-color: orange;
+    font-size: 12em;
+    color: rgb(12, 145, 254);
+    text-align: right;
+    font-family: "Sixtyfour Convergence", sans-serif;
+    text-decoration: underline overline;
+
+    
+}
+
+h2{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(47, 13, 13);
+    text-decoration: underline overline;
+    font-size: 2em;
+    text-align: center;
+    margin: 50px;
+    border: rgb(10, 255, 35);
+    padding: 10px;
+}
+
+label{
+    margin: 10px;
+    padding-bottom: 3px;
+    background-color: white; 
+}
