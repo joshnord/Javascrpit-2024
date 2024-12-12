@@ -28,8 +28,8 @@ function convert(){
 if (conv == "celsius"){
     console.log ("option = " + conv);
     
-    metValue = parseInt(valueBox.value) + 8;
-    impValue = parseInt(valueBox.value) - 8;
+    metValue = (parseInt(valueBox.value) - 32) * 5 / 9;
+    impValue = (parseInt(valueBox.value) / 5) * 9 + 32;
 
     console.log ("new metValue = " + metValue);
     console.log ("new impValue = " + impValue);
@@ -52,6 +52,15 @@ if (conv == "kilo"){
 }
 
 if (conv == "liter"){
-   
+    console.log ("option = " + conv);
+
+    metValue = parseInt(valueBox.value) + 6;   
+    impValue = parseInt(valueBox.value) - 6;
+
+    console.log ("new metValue = " + metValue);
+    console.log ("new impValue = " + impValue);
+
+    var hTwo = document.querySelector("h2");
+    hTwo.innerText = valueBox.value + " Gallons = " + metValue + " Liters" + "\n" + valueBox.value + " Liters = " + impValue + " Gallons";
 }}
 
