@@ -1,3 +1,50 @@
+// var n = 1;
+
+// while(n <= 10){
+//     console.log(n);
+//     n = n + 1;
+// }
+
+var n = 0;
+
+while(n < 100){
+    n += 12;
+    console.log(n);
+    
+}
+//   n++;         n += 1;        n = n + 1;
+
+
+
+var b = 1;
+
+//for loops are only numerical
+for(var b = 0; b <= 10; b++){
+
+console.log ("b = " + b);
+
+}
+
+
+
+var q = 1;
+
+//for loops are only numerical
+for(var q = 100; q >= 0; q--){
+
+console.log ("q = " + q);
+
+}
+
+
+
+//start of important stuff:
+
+
+
+
+
+
 
 var myHeader;
 window.onload = function(){
@@ -14,13 +61,13 @@ function primeFind(){
 
     var pBox = document.querySelector("#valueBox");
     var p = pBox.value
-    myHeader.innerText = " ";
-
-    var bobby = "Factors of " + p + " are:";
-    var pRoot = Math.ceil(Math.sqrt(p))
+    myHeader.innerText = "Factors of " + p + " are ";
 
 
-for(var x = pRoot; x >= 2; x--){
+
+
+
+for(var x = Math.sqrt(p); x >= 2; x--){
 
     if(p%x != 0){
         console.log ("prime so far. x = " + x);
@@ -29,9 +76,7 @@ for(var x = pRoot; x >= 2; x--){
     if(p%x == 0){
         console.log ("p ain't prime!!!!!!!! x = " + x);
         l = 5;
-        bobby = bobby + ", " + x + ", " + (p/x);
-        console.log (bobby);
-        myHeader.innerText = bobby;   
+        myHeader.innerText = document.querySelector("header") + ", " + x;    
     }
 //not n-1 ; sqrt(n) inclusive
 
