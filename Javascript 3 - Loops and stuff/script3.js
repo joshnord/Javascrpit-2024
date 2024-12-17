@@ -60,9 +60,23 @@ function primeFind(){
 
     }
 
+}
 
+if(p == 1){
+    console.log ("PPPRRRRIIIMMMMEEEEEE");  
+    console.log (" ");   
+    myOutput.innerText = p + " is PRIME";
+    myOutputTwo.innerText = p + " has no factors";
+}  
 
-}   }
+if(p == 2){
+    console.log ("PPPRRRRIIIMMMMEEEEEE");  
+    console.log (" ");   
+    myOutput.innerText = p + " is PRIME";
+    myOutputTwo.innerText = p + " has no factors";
+}  
+
+}
 
 //mod opertor %
 //returns remainder of division
@@ -74,9 +88,9 @@ function primeFind(){
 
 
 // wrong:
-//56, 1, 2, 6, 
+//56, 6, 
 //right:
-//16, 323232, 47, 97, 7, 3, 4, 8, 9, 10, 
+//16, 323232, 47, 97, 7, 3, 4, 8, 9, 10, 1, 2, 
 
 
 
