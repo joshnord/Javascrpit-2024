@@ -18,7 +18,7 @@ function primeFind(){
     myOutputTwo.innerText = " ";
     var bobby = "Factors of " + p + " are:";
     var pRoot = Math.ceil(Math.sqrt(p))
-
+    var ybbob = ""
 
     for(var x = 2; x <= pRoot; x++){
 
@@ -31,21 +31,16 @@ function primeFind(){
         l = 5;
 
 
-
-
-
-
-
-
-
-
-        bobby = bobby + ", " + x + ", " + (p/x);
+        bobby = bobby + ", " + x;
         console.log (bobby);
+        if(p/x != pRoot){
+            ybbob = ", " + (p/x) + ybbob;
+            console.log (ybbob);
+        }
 
-        
 
         myOutput.innerText = p + " Is Not Prime";
-        myOutputTwo.innerText = bobby;
+        myOutputTwo.innerText = bobby + ybbob;
     }
 //not n-1 ; sqrt(n) inclusive
 
@@ -78,36 +73,17 @@ function primeFind(){
 
 
 
+// wrong:
+//56, 1, 2, 6, 
+//right:
+//16, 323232, 47, 97, 7, 3, 4, 8, 9, 10, 
 
-
-
-//  ARRAY NOTES!!!!!!!!!
-
-var names = ["Reginald", "Archie"];
-
-names.push("Betty");
-
-console.log(names[0] + ": names[0]")
-console.log(names[1] + ": names[1]")
-
-
-names.sort();
-
-for(var i = 0; i < names.length; i++){
-console.log(names[i])
-
-}
 
 
 //things to do:
-//  eliminate copies
 //  variable commas
 
 //  first edit of bobby goes to var1; second, third, etc edits of bobby do x2, x3
-//  organize by size and delete repeats
-//  then, it all becomes normal bobby 
-
-
 
 function exampleArray(){
 
