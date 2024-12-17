@@ -13,37 +13,38 @@ function primeFind(){
 
 
     var pBox = document.querySelector("#valueBox");
-    var p = pBox.value
+    var p = pBox.value;
     myOutput.innerText = " ";
     myOutputTwo.innerText = " ";
-    var bobby = "Factors of " + p + " are:";
-    var pRoot = Math.ceil(Math.sqrt(p))
-    var ybbob = ""
+    var pRoot = Math.ceil(Math.sqrt(p));
+    var nums = [];
+
+
 
     for(var x = 2; x <= pRoot; x++){
 
+      
+
+    //if remainder
     if(p%x != 0){
         console.log ("prime so far. x = " + x);
     }
 
+
+
+    //output ifp is not prime; if no remainder; factorizing
     if(p%x == 0){
         console.log ("p ain't prime!!!!!!!! x = " + x);
         l = 5;
 
-
-        bobby = bobby + ", " + x;
-        console.log (bobby);
-        if(p/x != pRoot){
-            ybbob = ", " + (p/x) + ybbob;
-            console.log (ybbob);
-        }
-
+        nums.push(parseInt(x));
+        nums.push(parseInt(p/x));
 
         myOutput.innerText = p + " Is Not Prime";
-        myOutputTwo.innerText = bobby + ybbob;
     }
-//not n-1 ; sqrt(n) inclusive
 
+
+    //output if p is prime
     if(l == 0 && x > pRoot - 1){
 
         console.log ("PPPRRRRIIIMMMMEEEEEE");  
@@ -52,15 +53,36 @@ function primeFind(){
         myOutputTwo.innerText = p + " has no factors";
     }
 
+    //output if p ain't prime + reset l for next time
     if(l == 5 && x > pRoot - 1){
 
         console.log ("not");    
         console.log (" ");  
         l = 0;
 
+
+        // output of factors is here now
+        nums.sort(function(a, b){return a-b});
+
+
+        myOutputTwo.innerHTML = "Factors of " + p + " are: <br>" ;
+        
+        
+        for(var i = 0; i < nums.length; i++){
+        console.log(nums[i]);
+
+
+        myOutputTwo.innerHTML += (nums[i]);
+        }
+        
+        
+
     }
 
 }
+
+
+//if p = 1 or 2
 
 if(p == 1){
     console.log ("PPPRRRRIIIMMMMEEEEEE");  
