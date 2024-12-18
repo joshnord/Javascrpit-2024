@@ -32,13 +32,18 @@ function primeFind(){
 
 
 
-    //output ifp is not prime; if no remainder; factorizing
+    //output if p is not prime; if no remainder; factorizing
     if(p%x == 0){
         console.log ("p ain't prime!!!!!!!! x = " + x);
         l = 5;
+        
+        //almost works, but not quite
+            if(nums.lastIndexOf(x) != x){
+            nums.push(parseInt(x));
+            nums.push(parseInt(p/x));
+            }
 
-        nums.push(parseInt(x));
-        nums.push(parseInt(p/x));
+        console.log(nums[i]);
 
         myOutput.innerText = p + " Is Not Prime";
     }
@@ -66,13 +71,13 @@ function primeFind(){
 
 
         myOutputTwo.innerHTML = "Factors of " + p + " are: <br>" ;
-        
-        
+       
+        myOutputTwo.innerHTML += (nums.join(", "));
+
         for(var i = 0; i < nums.length; i++){
+
         console.log(nums[i]);
-
-
-        myOutputTwo.innerHTML += (nums[i]);
+    
         }
         
         
