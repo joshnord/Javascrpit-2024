@@ -1,3 +1,14 @@
+
+
+// next thing to work on: if decimal, round to nearest integer
+// if 0 or negative or a word, say "___ cannot be deemed factorable or unfactorable"
+
+
+
+
+
+
+
 var myOutput;
 window.onload = function(){
     myOutput = document.querySelector("header");

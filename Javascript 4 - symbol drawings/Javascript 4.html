@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="script4.js"></script>
-    <link rel="stylesheet" href="stylejava3.css">
+    <link rel="stylesheet" href="stylejava4.css">
 </head>
 <body>
+    
     <Header>Cool Header</Header>
-    <input type="number" id="valueBox" placeholder="Insert Number In Question">
-    <button onclick="primeFind();">Is it Prime?</button>
+
     <hr> 
-    <hr> 
-    <hr>
-    <button onclick="exampleArray();">Array</button>
 
+    <select name="shape" id="shape">
+        <option value="">Choose shape</option>
+        <option value="celsius">Square</option>
+        <option value="kilo">Triangle</option>
+        <option value="liter">Diamond</option>
 
+    </select>
 
-    <div id="factorlist"> </div>
+    <button onclick="shapeDraw();">Draw Now!</button>
+
+    <div id="output"> Shape = </div>
+
 </body>
 </html>

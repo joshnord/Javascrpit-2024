@@ -1,25 +1,14 @@
 
 body{
-    background-color: red
+    background-color: rgb(190, 45, 22)
 
 }
 header{
-    background-color: dodgerblue;
+    background-color: rgb(30, 83, 255);
     font-size: 2em;
     color: rgb(173, 173, 77);
     text-align: center;
     text-decoration: overline;
-}
-
-h1{
-    background-color: orange;
-    font-size: 12em;
-    color: rgb(12, 145, 254);
-    text-align: right;
-    font-family: "Sixtyfour Convergence", sans-serif;
-    text-decoration: underline overline;
-
-    
 }
 
 h2{
@@ -41,7 +30,7 @@ label{
 }
 
 
-#factorlist{
+#output{
     position: fixed;
     top: 200px;
     bottom: 15px;
