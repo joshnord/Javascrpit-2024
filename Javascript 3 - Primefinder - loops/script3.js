@@ -35,13 +35,24 @@ function primeFind(){
     //output if p is not prime; if no remainder; factorizing
     if(p%x == 0){
         console.log ("p ain't prime!!!!!!!! x = " + x);
+        //permanent indicator that it's not prime
         l = 5;
         
-        //almost works, but not quite
-            if(nums.lastIndexOf(x) != x){
+            //normal push case
+            if(x-1 != p/x && x != Math.sqrt(p)){
             nums.push(parseInt(x));
             nums.push(parseInt(p/x));
             }
+            //preventing repeats for perfect squares
+            if(x == Math.sqrt(p)){
+            nums.push(parseInt(x));
+            console.log("trigger square");
+            }
+            //alerting of prevented repeats for numbers like 6, 56, & 72
+            if(x-1 == p/x){
+            console.log("triggered");
+            }
+
 
         console.log(nums[i]);
 
@@ -63,10 +74,11 @@ function primeFind(){
 
         console.log ("not");    
         console.log (" ");  
+        //resetting primeness indicator to prepare for new number
         l = 0;
 
 
-        // output of factors is here now
+        // output of factors is here 
         nums.sort(function(a, b){return a-b});
 
 
@@ -105,6 +117,19 @@ if(p == 2){
 
 }
 
+
+
+
+
+
+
+
+
+
+
+// Examples:
+
+
 //mod opertor %
 //returns remainder of division
 
@@ -112,19 +137,6 @@ if(p == 2){
 //10%3 == 1
 //10/3 == 3 r1
 
-
-
-// wrong:
-//56, 6, 
-//right:
-//16, 323232, 47, 97, 7, 3, 4, 8, 9, 10, 1, 2, 
-
-
-
-//things to do:
-//  variable commas
-
-//  first edit of bobby goes to var1; second, third, etc edits of bobby do x2, x3
 
 function exampleArray(){
 
