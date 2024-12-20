@@ -53,13 +53,26 @@ if (shapeSelect == "Diamond" && x > size/2){
 
 
 
+
+
 if (shapeSelect == "Triangle"){
     console.log ("Triangle");
     output.innerHTML = "goodbye world <br>" ;
     var asterix = x;
     var space = 0;
-
+    //creates lines
+    for(var asterix = x; x <= size; x++){
+        polygon.push("*");
+    
+    //inputs each column one at a time
+    for(var x = 1; x <= size; x++){
+        console.log ((polygon.join("")));
+        output.innerHTML += (polygon.join("")) + "<br>";
+    }
+    }
 }
+
+
 
 
 
@@ -68,22 +81,14 @@ if (shapeSelect == "Square"){
     output.innerHTML = "hello world <br>" ;
     var asterix = x;
     var space = 0;
-
-    for(var asterix = size - x; x <= size; x++){
+    //creates lines
+    for(var asterix = x; x <= size; x++){
         polygon.push("*");
     }
-
+    //inputs each column one at a time
     for(var x = 1; x <= size; x++){
-        
         output.innerHTML += (polygon.join("")) + "<br>";
-
     }
-
-    for(var i = 0; i < polygon.length; i++){
-
-    console.log (polygon[i]);
-
-}
 }
 
 // output.innerHTML += (polygon.join(""));
