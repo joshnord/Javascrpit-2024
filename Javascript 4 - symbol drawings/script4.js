@@ -54,9 +54,70 @@ for(var x = 1; x <= size; x++){
 
 
 if (shapeSelect == "Diamond"){
+    //dorpdown = diamond ==> this triggers
 
+    if (size % 2 != 0){
+        // size is odd or decimal 
+                                                                        // var asterix = "";
+                                                                        // var space = "";
+        var current = "";
+        //inputs each column one at a time:
+        for(var x = 1; x <= size; x++){
+            //x is one for first line, 2 for second, until x = size. 
+            output.innerHTML +=  "<br>";
+               
+            //creates spaces in line:
+            for(var space = ( (size/2) - .5 ); space >= 0; space--){
+                current =+ " "  ;
+                console.log ('current = ' + current);
+                output.innerHTML += current
+            }
+            //creates asterixes in line:
+            for(var asterix = (2 * x) - 1; asterix <= (2 * size) - 1; asterix++){
+                current =+ "*"  ;
+                console.log ('current = ' + current);
+                output.innerHTML += current
+            }
+            current == "";
+            console.log ('current = ' + current);
+        }
+
+    }
+
+
+    if (size % 2 == 0){
+
+        output.innerHTML += "This is even :(";
+
+    }
     // && size%2 != 0
+
+
+    //     ( (size/2) - .5 ) ==> add " " this many times
+    //     add "*" once
+    //     add this line
+
+    //    current == 
+    //     ( (size/2) - .5 ) - 1
+    //     "*"               + "**"
+    //     add this line
+
+    //     asterix <= size
+
+
+
     // && size%2 == 0
+
+    //     ( (size/2) ) ==> add " " this many times
+    //     add "**" once
+
+    //     ( (size/2) ) - 1
+    //     "**"         + "**"
+
+    //     asterix <= size
+
+
+
     console.log ("Triangle eeeeeeeeeeeeeeeeeeeeeeeee");
     output.innerHTML = "It's a rhombus, my dude <br>" ;
     var asterix = x;
