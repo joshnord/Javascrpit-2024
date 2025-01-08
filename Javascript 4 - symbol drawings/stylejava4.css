@@ -32,10 +32,10 @@ label{
 
 #output{
     position: fixed;
-    top: 200px;
+    top: 50px;
     bottom: 15px;
     right: 0px;
-    width: 200px;
+    width: 800px;
     font-size: 2em;
     border-color: rgb(13, 42, 47);
     overflow-y: scroll;
