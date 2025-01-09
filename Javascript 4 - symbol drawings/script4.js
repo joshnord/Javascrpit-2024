@@ -53,12 +53,12 @@ function rhombusDraw(size){
 
     console.log ("diagmk6ed");
     output.innerHTML = "It's a rhombus, my dude <br>" ;
-
+var current = "";
     if (size % 2 != 0){
         // size is odd or decimal 
                                                                         // var asterix = "";
                                                                         // var space = "";
-        var current = "";
+        
         //inputs each column one at a time:
         for(var x = 1; x <= size; x++){
             //x is one for first line, 2 for second, until x = size. 
@@ -66,18 +66,13 @@ function rhombusDraw(size){
          
                
                             console.log ("var x = 1; x <= size; x++");
-
-            //creates spaces in line:
-            for(var space = ( (size/2) - .5 ); space >= 0; space--){
-                //if size is 5, space is 2     space is greater or equal to 0    space counts from [2] to 0
-                current = ""  ;
-                
-                current += " "  ;
+            for(var space = 1 ; space <= (Math.ceil(size/2) - x); space++){
+                current += " ."  ;
                 console.log ('space current =' + current + "!");
                 // output.innerHTML += current
-            
+            }
             //creates asterixes in line:
-            for(var asterix = (2 * x) - 1; asterix <= (2 * size) - 1;  asterix++){
+            for(var asterix = 2 * x + 1 ; x <= size; x++){
                 // (2 * x) - 1 = 9 ---- peak # a=of asterixes
                 current += "*"  ;
                 console.log ('asterix current = ' + current);
@@ -91,7 +86,7 @@ function rhombusDraw(size){
             console.log ('reset current = ' + current);
         }
 
-    }
+    
 
 
 
