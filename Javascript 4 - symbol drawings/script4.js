@@ -120,7 +120,6 @@ function rhombusDraw(size){
     }
 
 
-
     if (size % 2 == 0){
 
         for(var x = 1; x <= Math.ceil(size/2); x++){
@@ -134,7 +133,7 @@ function rhombusDraw(size){
                 console.log ('space current =' + current);
             }
             //creates asterixes in line:
-            for(var asterix = 1; asterix <= 2 * x - 1; asterix++){
+            for(var asterix = 0; asterix <= 2 * x - 1; asterix++){
                 // (2 * x) - 1 = 9 ---- peak # a=of asterixes
                 current += "*"  ;
                 console.log ('asterix current = ' + current);
@@ -157,7 +156,7 @@ function rhombusDraw(size){
                 console.log ('space current =' + current);
             }
             //creates asterixes in line:
-            for(var asterix = 1; asterix <= 2 * x - 1; asterix++){
+            for(var asterix = 0; asterix <= 2 * x - 1; asterix++){
                 // (2 * x) - 1 = 9 ---- peak # a=of asterixes
                 current += "*"  ;
                 console.log ('asterix current = ' + current);
