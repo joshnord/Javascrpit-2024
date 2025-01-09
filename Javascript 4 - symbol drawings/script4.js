@@ -53,56 +53,43 @@ function rhombusDraw(size){
 
     console.log ("diagmk6ed");
     output.innerHTML = "It's a rhombus, my dude <br>" ;
-var current = "";
+    var current = "|";
     if (size % 2 != 0){
         // size is odd or decimal 
                                                                         // var asterix = "";
                                                                         // var space = "";
         
         //inputs each column one at a time:
-        for(var x = 1; x <= size; x++){
+        for(var x = 1; x <= Math.ceil(size/2); x++){
             //x is one for first line, 2 for second, until x = size. 
            
          
                
                             console.log ("var x = 1; x <= size; x++");
             for(var space = 1 ; space <= (Math.ceil(size/2) - x); space++){
-                current += " ."  ;
-                console.log ('space current =' + current + "!");
-                // output.innerHTML += current
+                current += "&nbsp;";
+                console.log ('space current =' + current);
             }
             //creates asterixes in line:
-            for(var asterix = 2 * x + 1 ; x <= size; x++){
+            for(var asterix = 1; asterix <= 2 * x - 1; asterix++){
                 // (2 * x) - 1 = 9 ---- peak # a=of asterixes
                 current += "*"  ;
                 console.log ('asterix current = ' + current);
-                
             }
-            output.innerHTML += current + "<br>";
+            for(var space = 1 ; space <= (Math.ceil(size/2) - x); space++){
+                current += "&nbsp;";
+                console.log ('space current =' + current);
             }
-
-            console.log ('post-output current = ' + current);
-            current == "";
+            output.innerHTML += current + "|<br>|";
+            console.log ('post-output current = ' + current + " line number = " + x);
+            current = "";
             console.log ('reset current = ' + current);
-        }
+            }
 
-    
-
-
-
-    // && size%2 != 0
+            
+    }
 
 
-    //     ( (size/2) - .5 ) ==> add " " this many times
-    //     add "*" once
-    //     add this line
-
-    //    current == 
-    //     ( (size/2) - .5 ) - 1
-    //     "*"               + "**"
-    //     add this line
-
-    //     asterix <= size
 
     if (size % 2 == 0){
 
