@@ -1,8 +1,16 @@
+.hide{
+    display: none;
 
+
+}
 
 
 .done{
     /* for already bought array */
+    padding: 5px;
+    margin: 2px;
+    border: 2px solid black;
+    background-color: aquamarine;
     text-decoration: line-through;
     text-decoration-color: red; 
     opacity: .7;
@@ -18,3 +26,5 @@ li{
     background-color: aquamarine;
 
 }
+
+

@@ -3,7 +3,43 @@
 var arrayOne = [];  
 
 
+// function doSomething(el){
+//     alert (el.html);
+//     } 
 
+function doOtherThing(){
+
+    // doOtherThingg();
+var n = document.querySelectorAll (".done");
+console.log(n);
+// All
+
+// .classList
+for (var i = 0; i<n.length; i++){
+
+console.log (n[i].innerText);
+n[i].classList.toggle("hide");
+
+}
+
+}
+
+//boolean hidden = false;
+//function hide{
+    //hidden = !hidden;
+//}
+//if(hidden)
+
+function doSomething(el){
+    el.classList.toggle("done");
+    
+// function doOtherThingg(){
+//     el.classList.toggle("hide");
+
+// }
+}
+
+    //    li onclick = doSomething(this);
 function addItem(){
     
     //get value of textbox (v)
@@ -22,6 +58,17 @@ function addItem(){
     var li = document.createElement("li");
     li.innerText = newItem;
 
+    li.setAttribute("onclick", "doSomething(this)")
+
+// classlist.add
+// claslist. remove
+
+//.clsslist 
+// onclick can be done to any element
+// .toggle
+
+
+
 
     // li.classList.add ("done");
 
@@ -36,4 +83,6 @@ function addItem(){
     
     console.log (arrayOne[i]);
     }
+
 }
+
