@@ -5,6 +5,12 @@ var arrayOne = [];
 var shouldHide = false;
 
 
+
+
+
+
+
+
 function doOtherThing(){
 
     shouldHide = !shouldHide;
@@ -39,6 +45,8 @@ function addItem(){
     li.setAttribute("onclick", "doSomething(this)");
 
     arrayOne.push (newItem);
+
+
     //add item to list
     var myList = document.querySelector("#list");
     myList.appendChild(li);
@@ -48,4 +56,11 @@ function addItem(){
     
     console.log (arrayOne[i]);
     }
+
+
+
+
+    //clear inner value oon enter
+    newItemBox.value = "";
+    newItemBox.focus();
 }
