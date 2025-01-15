@@ -32,14 +32,20 @@ function doSomething(el){
 function addItem(){
     
     var newItemBox = document.querySelector("#newItem");
-    var newItem = newItemBox.value.trim();
+    var newItem = newItemBox.value;
 // (&& = and; ||  = or)
 
-    // var p = newItemBox.value;
-    // console.log (p);
-    // p.trim();
-    //  && newItem != p
-    if (newItem != ""){
+
+    //check if newItem = " " or "    " or "         "
+    var coolArray = [];
+    
+    for(var p = 1; p <= newItem.length; p++){
+        coolArray.push (" ");
+        console.log ("newItem.length = " + newItem.length);
+    }
+    
+    //
+    if (newItem != "" && newItem != coolArray.join("")){
         console.log ("success!");
         var li = document.createElement("li");
         li.innerText = newItem;
