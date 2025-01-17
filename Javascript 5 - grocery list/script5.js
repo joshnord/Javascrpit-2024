@@ -22,11 +22,25 @@ function doOtherThing(){
         }
     }
 }
+
+// myList.removeChild();
+
+
+
+
+
     
 //crossing out
 function doSomething(el){
     el.classList.toggle("done");
 }
+
+function doSomethingElse(){
+    console.log("DELEEETTTEEEE");
+
+}
+
+
 
 //adding to list
 function addItem(){
@@ -40,13 +54,18 @@ function addItem(){
     // p.trim();
     //  && newItem != p
     if (newItem != ""){
+
         console.log ("success!");
         var li = document.createElement("li");
         li.innerText = newItem;
-
         li.setAttribute("onclick", "doSomething(this)");
-
         arrayOne.push (newItem);
+
+        
+        var exx = document.createElement("span");
+        exx.innerText = "X"
+        exx.setAttribute("onclick", "doSomethingElse(this)");
+        li.appendChild(exx);
 
 
         //add item to list
@@ -54,10 +73,10 @@ function addItem(){
         myList.appendChild(li);
 
 
-        for(var i = 0; i < arrayOne.length; i++){
-        
-        console.log (arrayOne[i]);
-        }
+            for(var i = 0; i < arrayOne.length; i++){
+            
+            console.log (arrayOne[i]);
+            }
     }
     //clear inner value oon enter
     newItemBox.value = "";
@@ -87,16 +106,37 @@ var emailI = document.querySelector("#email").value;
     console.log("email = " + emailI);
 var atLocate = emailI.indexOf("@");
     console.log(atLocate);
+var dotLocate = emailI.lastIndexOf(".");
+    console.log(atLocate);
 var userName = "";
-    if (atLocate != -1){
+    if (atLocate != -1 && atLocate < dotLocate){
 
-        userName = emailI.slice(0, atLocate);
+        userNameI = emailI.slice(0, atLocate);
+
+        userName = userNameI[0].toUpperCase()+userNameI.substr(1);
 
         console.log("username = " + userName);
 
         h5.innerHTML = "Hello " + userName.trim();
     }
-    if (atLocate == -1){
-        h5.innerHTML = "Hello new friend! <br> <br> CONGRATULATIONS <br><br> YOU HAVE PASSED MY TEST <br><br> I know you now to be " + emailI.trim() + "!";
+    if (atLocate == -1 || atLocate >= dotLocate){
+        h5.innerHTML = "Hello new friend! <br> <br> CONGRATULATIONS <br><br> YOU HAVE PASSED MY TEST <br><br> I know you now to be " + emailI.trim() + "! <br> <br> ERROR: not an email";
     }
 }
+
+//Pass:
+//bob@gmail.com
+//dogernorgn@gmail.com
+//dogern.orgn@gmail.com
+//dogern.orgn@gma.il.com
+//dogern.orgn@gmail.co@m
+//dogern@.orgn@gmail.co@m
+//@.@
+//.@.
+//@.
+
+//Fail:
+//.@
+//dfiiyghiuhiugheugheruheihgieuhguihgihgiueh@iiduh
+//r@r
+//gmail.com

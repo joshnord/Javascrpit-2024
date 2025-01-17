@@ -45,4 +45,46 @@ li{
     cursor: pointer;
 
 
+
+
+
+}
+
+
+
+
+.blue{
+    position:relative; 
+    /* offset from the flow */
+    top: 10px;
+}
+
+.blue{
+    position:fixed; 
+    /* offset from the flow */
+    right: 0px;
+    bottom: 0px;
+}
+
+footer{
+
+    position:fixed;
+    height: 30px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+img{
+    position:absolute;
+    /* bases position on nearest parent element that is not position static */
+    bottom: 0px;
+    right: 0px;
+}
+
+.exx{
+    position:absolute;
+    /* bases position on nearest parent element that is not position static */
+    top: -5px;
+    right: -5px;
 }
