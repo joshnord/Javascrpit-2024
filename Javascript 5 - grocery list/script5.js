@@ -63,3 +63,40 @@ function addItem(){
     newItemBox.value = "";
     newItemBox.focus();
 }
+
+
+
+
+
+
+
+
+
+//email
+
+var h5;
+window.onload = function(){
+    h5 = document.querySelector("h5");
+    console.log (h5);
+}
+
+function emailInput(){
+// emailin' stuff
+//    https://www.w3schools.com/js/js_string_search.asp
+var emailI = document.querySelector("#email").value;
+    console.log("email = " + emailI);
+var atLocate = emailI.indexOf("@");
+    console.log(atLocate);
+var userName = "";
+    if (atLocate != -1){
+
+        userName = emailI.slice(0, atLocate);
+
+        console.log("username = " + userName);
+
+        h5.innerHTML = "Hello " + userName.trim();
+    }
+    if (atLocate == -1){
+        h5.innerHTML = "Hello new friend! <br> <br> CONGRATULATIONS <br><br> YOU HAVE PASSED MY TEST <br><br> I know you now to be " + emailI.trim() + "!";
+    }
+}
