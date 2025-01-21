@@ -1,6 +1,12 @@
 
 
-
+//var el = document.createElement("span");
+//el.addEventListener("click", delete);
+//function delete(event){
+//alert(this.innerHTML);
+//event.stopPropagation();
+//
+//}
 
 
 //reloding data
@@ -43,16 +49,27 @@ function doSomething(el){
     el.classList.toggle("done");
 }
 
-function doSomethingElse(el){
-    console.log("DELEEETTTEEEE");
-    // arrayOne.splice(el.dataset.index, 1);
-    console.log(arrayOne);
-    el.parentElement.parentElement.removeChild(el.parentElement);
-    //el.dataset.index = 7
-    
-    //myArray.splice(1,1);
-    //idex, # of items
+
+
+var ele = document.createElement("span");
+ele.addEventListener("click", doSomethingElse);
+function doSomethingElse(event){
+alert(this.innerHTML);
+console.log("alert(this.innerHTML);" + this.innerHTML);
+event.stopPropagation();
+arrayOne.splice(el.dataset.index, 1);
 }
+
+// function doSomethingElse(el){
+//     console.log("DELEEETTTEEEE");
+//     // 
+//     console.log(arrayOne);
+//     el.parentElement.parentElement.removeChild(el.parentElement);
+//     //el.dataset.index = 7
+    
+//     //myArray.splice(1,1);
+//     //idex, # of items
+// }
 
 
 
