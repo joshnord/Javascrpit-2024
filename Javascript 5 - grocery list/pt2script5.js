@@ -51,39 +51,62 @@ function doSomething(el){
 
 
 
-var ele = document.createElement("span");
-ele.addEventListener("click", doSomethingElse);
+// var ele = document.createElement("span");
+
+
 function doSomethingElse(event){
-alert(this.innerHTML);
-console.log("alert(this.innerHTML);" + this.innerHTML);
-event.stopPropagation();
-arrayOne.splice(el.dataset.index, 1);
+    // alert(this.innerHTML);
+    // console.log("alert(this.innerHTML);" + this.innerHTML);
+    console.log("rfnr");
+    event.stopPropagation(); //this is undefined
+    arrayOne.splice(this.parentElement.dataset.index, 1);
+    console.log(arrayOne);
 }
 
+//goes through array., craetes all elements, adds to the thing
+//call everytim add something
+
+
+
 // function doSomethingElse(el){
-//     console.log("DELEEETTTEEEE");
-//     // 
-//     console.log(arrayOne);
 //     el.parentElement.parentElement.removeChild(el.parentElement);
 //     //el.dataset.index = 7
-    
 //     //myArray.splice(1,1);
-//     //idex, # of items
 // }
+
+
 
 
 
 //adding to list
 function addItem(){
     
+    
+    
+    
+//goes through array., craetes all elements, adds to the thing
+//call everytim add something
+
+                // function redo(){
+                    var arrayTwo = [];
+                   for (var t = 0, t < arrayOne.length, t++){
+                    arrayTwo.push(arrayOne[i]);
+                   }
+                     console.log(arrayTwo)
+                    arrayOne = [];
+                    console.log(arrayOne)
+                    //add newitem to array 2 
+                    arrayOne.push(arrayTwo[i]);
+                    console.log(arrayOne)
+                // }
+
+
+
+
     var newItemBox = document.querySelector("#newItem");
     var newItem = newItemBox.value.trim();
 // (&& = and; ||  = or)
 
-    // var p = newItemBox.value;
-    // console.log (p);
-    // p.trim();
-    //  && newItem != p
     if (newItem != ""){
 
         console.log ("success!");
@@ -97,7 +120,8 @@ function addItem(){
         var exx = document.createElement("span");
         exx.innerText = "X"
         exx.classList.add("exx");
-        exx.setAttribute("onclick", "doSomethingElse(this)");
+        // exx.setAttribute("onclick", "doSomethingElse(this)");
+        exx.addEventListener("click", doSomethingElse);
         li.appendChild(exx);
 
 
