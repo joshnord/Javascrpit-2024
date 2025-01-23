@@ -1,20 +1,32 @@
 
 
+//var el = document.createElement("span");
+//el.addEventListener("click", delete);
+//function delete(event){
+//alert(this.innerHTML);
+//event.stopPropagation();
+//
+//}
 
 
+//reloding data
+//deleting elements from the array
+//store all properties
+//solve propogation problem
 
 var arrayOne = [];  
 
 var shouldHide = false;
-//crossing out
-function doSomething(el){
-    el.classList.toggle("done");
-}
+
+
 //hiding & unhiding
 function doOtherThing(){
+
     shouldHide = !shouldHide;
+
     var n = document.querySelectorAll (".done");
     console.log(n);
+
     for (var q = 0; q < n.length; q++){
         if(shouldHide ){
             n[q].classList.add("hide");
@@ -25,9 +37,23 @@ function doOtherThing(){
     }
 }
 
+// myList.removeChild();
 
 
-//SHOULD delete element
+
+
+
+    
+//crossing out
+function doSomething(el){
+    el.classList.toggle("done");
+}
+
+
+
+// var ele = document.createElement("span");
+
+
 function doSomethingElse(event){
     // alert(this.innerHTML);
     // console.log("alert(this.innerHTML);" + this.innerHTML);
@@ -35,36 +61,38 @@ function doSomethingElse(event){
     event.stopPropagation(); //this is undefined
     arrayOne.splice(this.parentElement.dataset.index, 1);
     console.log(arrayOne);
-    redo();
 }
+// function doSomethingElse(el){
+//     el.parentElement.parentElement.removeChild(el.parentElement);
+//     //el.dataset.index = 7
+//     //myArray.splice(1,1);
+// }
 
-//SHOULD delete all ELEMENTS and repopulate from array    (called everytime I add something)
-                                                        //seperate function with a for loop and for eah one creates the item
 
-                        // function doSomethingElse(el){
-                        //     el.parentElement.parentElement.removeChild(el.parentElement);
-                        //     //el.dataset.index = 7
-                        //     //myArray.splice(1,1);
-                        // }
 
-                        // myList.removeChild();
+
+
+
+//goes through array., craetes all elements, adds to the thing
+//call everytim add something
+
+
+//seperate function with a for loop and for eah one creates the item
 function redo(){
-    
-    
-    document.querySelector("#list").innerHTML = "";
-//    return 
-    
+        var arrayTwo = [];
+        for (var t = 0; t < arrayOne.length; t++){
+            arrayTwo.push(arrayOne[t]);}
+        console.log("Two = " + arrayTwo);
+        arrayOne = [];
+        console.log("One = " + arrayOne);
+
     for (var t = 0; t < arrayOne.length; t++){
-            
-        
-        console.log ("redo!");
+            arrayOne.push(arrayTwo[t]);
         var li = document.createElement("li");
-        li.innerText = arrayOne[t];
-        // li.innerText = newItem;
+        li.innerText = newItem;
         li.setAttribute("onclick", "doSomething(this)");
-        li.dataset.index=t;
-        // li.dataset.index=arrayOne.length;
-        // arrayOne.push (newItem);
+        li.dataset.index=arrayOne.length;
+        arrayOne.push (newItem);
 
 
         var exx = document.createElement("span");
@@ -78,37 +106,8 @@ function redo(){
         //add item to list
         var myList = document.querySelector("#list");
         myList.appendChild(li);
-        //good!
-        //remove item: removes from array
     }
-    saveData();
 }
-
-function saveData(){
-    let jTasks = JSON.stringify(arrayOne);
-    console.log(jTasks);
-    localStorage.setItem("taks", jTasks)
-    // .setItem(key)   
-
-
-}
-function loadData(){
-    let jTasks = localStorage.getItem("taks");
-    if (jTasks != null){
-        arrayOne = JSON.parse(jTasks);
-    }
-    redo();
-
-
-}
-
-// localStorage.setItem("key", value)
-// .setItem(key)
-// convert arrays to strings
-// JSON
-// stringify
-// let jTasks = JSON.stringify(arrayOne)
-
 
 
 
@@ -116,6 +115,12 @@ function loadData(){
 function addItem(){
     
     
+    
+    
+
+
+
+
     var newItemBox = document.querySelector("#newItem");
     var newItem = newItemBox.value.trim();
 // (&& = and; ||  = or)
@@ -123,26 +128,24 @@ function addItem(){
     if (newItem != ""){
 
         console.log ("success!");
-        // var li = document.createElement("li");
-        // li.innerText = newItem;
-        // li.setAttribute("onclick", "doSomething(this)");
-        // li.dataset.index=arrayOne.length;
+        var li = document.createElement("li");
+        li.innerText = newItem;
+        li.setAttribute("onclick", "doSomething(this)");
+        li.dataset.index=arrayOne.length;
         arrayOne.push (newItem);
-        console.log("arrayOne pre-redo = " + arrayOne + "   newItem = " + newItem)
-        redo();
 
         
-        // var exx = document.createElement("span");
-        // exx.innerText = "X";
-        // exx.classList.add("exx");
-        // // exx.setAttribute("onclick", "doSomethingElse(this)");
-        // exx.addEventListener("click", doSomethingElse);
-        // li.appendChild(exx);
+        var exx = document.createElement("span");
+        exx.innerText = "X";
+        exx.classList.add("exx");
+        // exx.setAttribute("onclick", "doSomethingElse(this)");
+        exx.addEventListener("click", doSomethingElse);
+        li.appendChild(exx);
 
 
-        // //add item to list
-        // var myList = document.querySelector("#list");
-        // myList.appendChild(li);
+        //add item to list
+        var myList = document.querySelector("#list");
+        myList.appendChild(li);
 
 
             for(var i = 0; i < arrayOne.length; i++){
@@ -153,9 +156,6 @@ function addItem(){
     //clear inner value oon enter
     newItemBox.value = "";
     newItemBox.focus();
-
-
-    saveData();
 }
 
 
@@ -172,7 +172,6 @@ var h5;
 window.onload = function(){
     h5 = document.querySelector("h5");
     console.log (h5);
-    loadData();
 }
 
 function emailInput(){
@@ -202,8 +201,6 @@ var userName = "";
         h5.innerHTML = "Hello new friend! <br> <br> CONGRATULATIONS <br><br> YOU HAVE PASSED MY TEST <br><br> I know you now to be nameless! <br> <br> ERROR: not an email";
     
     }
-    saveData();
-
 }
 
 //Pass:
