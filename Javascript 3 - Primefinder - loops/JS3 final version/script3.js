@@ -1,3 +1,5 @@
+// (&& = and; ||  = or)
+
 
 
 // next thing to work on: if decimal, round to nearest integer
