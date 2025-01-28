@@ -26,3 +26,13 @@
 [Log] hthewtwed (pt2script5.js, line 113)
 [Log] ewvrgb (pt2script5.js, line 113)
 [Log] mmymt (pt2script5.js, line 113)
+
+
+
+
+
+plans within plans, wheels withing wheels
+
+there are wheels withing wheels
+
+wheels are turning

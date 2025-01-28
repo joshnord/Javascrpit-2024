@@ -38,10 +38,16 @@ function doOtherThing(){
 
 
             // //TODO: new item or li?
-            //     let newItem = {
+            //     let newerItem = {
             //         doneness: isDone, 
             //         hideness: isHide,
             //     }
+            //     arrayOne.push(newerItem);
+
+            // // leftBar.innerHTML = "";
+            // // listRolls();
+
+            // // // look at listRolls to understand more
 
 
 
