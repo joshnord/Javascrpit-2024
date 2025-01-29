@@ -6,103 +6,23 @@
 var arrayOne = [];  
 
 
+var hideThing = false;
 
 
-
- 
-
-//TODO: ensure this works with objects
-
-var shouldHide = false;
-//crossing out - triggered by clicking li
-function doSomething(el){
-    el.classList.toggle("done");
-}
-//hiding & unhiding - triggered by button
+//hiding & unhiding - triggered by button ----- just do redo
 function doOtherThing(){
-    shouldHide = !shouldHide;
-    var n = document.querySelectorAll (".done");
-    console.log(n);
-    for (var q = 0; q < n.length; q++){
-        if(shouldHide ){
-            n[q].classList.add("hide");
-        }
-        else{
-            n[q].classList.remove("hide");
-        }
+    if(hideThing == false){
+        hideThing = true;
     }
-}
-
-
-
-
-
-            // //TODO: new item or li?
-            //     let newerItem = {
-            //         doneness: isDone, 
-            //         hideness: isHide,
-            //     }
-            //     arrayOne.push(newerItem);
-
-            // // leftBar.innerHTML = "";
-            // // listRolls();
-
-            // // // look at listRolls to understand more
-
-
-
-
-
-
-
-
-//deletes li.parent from array and repopulates list
-function doSomethingElse(event){
-    event.stopPropagation();
-    arrayOne.splice(this.parentElement.dataset.index, 1);
-    console.log(arrayOne);
+    else{
+        hideThing = false;
+    }
     redo();
+
 }
 
 
 
-//TODO: check if better 
-                        // function doSomethingElse(el){
-                        //     el.parentElement.parentElement.removeChild(el.parentElement);
-                        //     //el.dataset.index = 7
-                        //     //myArray.splice(1,1);
-                        // }
-
-                        // myList.removeChild();
-
-
-
-
-
-//deletes list, adds li and exx for every array member
-
-function redo(){
-    //deletes ALL elements in table 
-    document.querySelector("#list").innerHTML = "";
-    console.log ("redo!");  
-    //adds li and exx -- counts from arrayOne[0] to arrayOne[length]
-    for (var t = 0; t < arrayOne.length; t++){
-        var li = document.createElement("li");
-        li.innerText = arrayOne[t];     // li.innerText = newItem;
-        li.setAttribute("onclick", "doSomething(this)");
-        li.dataset.index = t;             // li.dataset.index = arrayOne.length;    //TODO: check if necessary
-
-        var exx = document.createElement("span");
-        exx.innerText = "X";
-        exx.classList.add("exx");
-        exx.addEventListener("click", doSomethingElse);
-
-        var myList = document.querySelector("#list");
-        li.appendChild(exx);
-        myList.appendChild(li);
-    }
-    saveData();
-}
 
 
 
@@ -128,6 +48,10 @@ function loadData(){
 
 
 
+
+
+
+
 //reads input, gives to array, does "redo()"
 
 function addItem(){
@@ -137,8 +61,14 @@ function addItem(){
 
     if (newItem != ""){
         console.log ("success!");
-        arrayOne.push (newItem);
-        
+
+        let newerItem = {
+            name: newItem,
+            doneness: false, 
+        }
+        arrayOne.push(newerItem);
+        // arrayOne.push (newItem);
+
         //creats items as newItem used to do
         redo();
 
@@ -151,6 +81,73 @@ function addItem(){
     newItemBox.focus();
     saveData();
 }
+
+
+
+
+//deletes list, adds li and exx for every array member
+
+function redo(){
+    //deletes ALL elements in table 
+    document.querySelector("#list").innerHTML = "";
+    console.log ("redo!");  
+    //adds li and exx -- counts from arrayOne[0] to arrayOne[length]
+    for (var t = 0; t < arrayOne.length; t++){
+        var li = document.createElement("li");
+        li.innerText = arrayOne[t].name;     // li.innerText = newItem;
+        li.setAttribute("onclick", "doSomething(this)");
+        li.dataset.index = t;             // li.dataset.index = arrayOne.length;    //TODO: check if necessary
+        
+        if(arrayOne[t].doneness == true){
+            li.classList.add(hideThing?"hide":"done");
+        }
+
+        var exx = document.createElement("span");
+        exx.innerText = "X";
+        exx.classList.add("exx");
+        exx.addEventListener("click", doSomethingElse);
+
+        var myList = document.querySelector("#list");
+        li.appendChild(exx);
+        myList.appendChild(li);
+
+
+
+        
+
+        // if(arrayOne[t].doneness == true){
+        //     
+        // }
+        // if(arrayOne[i].doneness == false){
+        //     arrayOne[i].classList.remove("hide");
+        // }
+
+
+    }
+    
+    saveData();
+}
+
+
+
+
+//deletes li.parent from array and repopulates list
+
+function doSomethingElse(event){
+    event.stopPropagation();
+    arrayOne.splice(this.parentElement.dataset.index, 1);
+    console.log(arrayOne);
+    redo();
+}
+
+
+//crossing out - triggered by clicking li
+
+function doSomething(el){
+    arrayOne[el.dataset.index].doneness = !arrayOne[el.dataset.index].doneness;
+    redo();
+    }
+
 
 
 

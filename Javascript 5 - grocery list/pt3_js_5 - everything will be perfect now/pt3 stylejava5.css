@@ -94,3 +94,7 @@ img{
     background-color: white;
 }
 
+nav span{
+
+    display: inline-block;
+}
