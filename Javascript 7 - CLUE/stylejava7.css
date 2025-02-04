@@ -1,0 +1,56 @@
+#blockOne{
+    background-color: #12a22a;
+    position: fixed;
+    top: 0px;
+    bottom: 0px; 
+
+    left: 0px;
+    width: 60vw;
+    /* overflow-y: scroll; */
+
+
+}
+
+#blockTwo{
+    background-color: #12a22a;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+
+    right: 0px;
+    width: 40vw;
+    /* overflow-y: scroll; */
+
+
+}
+
+
+#blockAccuse{
+    background-color: white;  
+    position: fixed;
+    top: 45vh;
+    width: 20vw;
+
+
+}
+
+
+img{
+    max-width: 20vw;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    max-height: 40vh;
+}
+
+#room{
+    font-size: 2em;
+    margin: 0;
+}
+#person{
+    font-size: 2em;
+    
+}
+#weapon{
+    font-size: 2em;
+    
+}

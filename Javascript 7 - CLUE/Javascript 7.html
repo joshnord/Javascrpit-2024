@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="script7.js"></script>
+<link rel="stylesheet" href="stylejava7.css">
+</head>
+
+
+
+
+
+
+
+<body>
+
+<div id="blockOne">
+    <!-- save game, map, accuse, suspect input -- info gleaned, items list -- turn tracker -->
+
+
+
+    <div id="blockSuspect">
+        <span class="button" onclick="save()">Save Game</span>
+    
+
+        <div class="imgleft">
+            <img src="../images/map.jpeg"
+                alt="game map">
+        </div>
+
+        <div id="blockAccuse">
+            
+            
+                <div>
+                  <label for="accuse">ACCUSE</label>
+                  <input type="checkbox" id="accuse" name="accuse" checked />
+                  
+                </div>
+                <div>
+                <select name="person" id="person">
+                    <option value="">Person</option>
+                    <option value="Square">Square</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Diamond">Diamond</option>
+                    <option value="Square">Square</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Diamond">Diamond</option>
+            
+                </select>
+                </div>
+                <div>
+                <select name="room" id="room">
+                    <option value="">Room</option>
+                    <option value="Square">Square</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Diamond">Diamond</option>
+                    <option value="Square">Square</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Diamond">Diamond</option>
+                    <option value="Square">Square</option>
+                    <option value="Triangle">Triangle</option>
+            
+                </select>
+            </div> <div> 
+                <select name="weapon" id="weapon">
+                    <option value="">Weapon</option>
+                    <option value="Square">Square</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Diamond">Diamond</option>
+                    <option value="Square">Square</option>
+                    <option value="Triangle">Triangle</option>
+                    <option value="Diamond">Diamond</option>
+            
+                </select>
+                </div>
+                <span class="button" onclick="playerOneSuspect()">+</span>
+
+
+        </div>
+            
+    </div>
+
+
+
+
+
+    
+    <div id="blockInfo">
+
+        <div id="itemList">
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div id="blockTurnOrder">
+
+
+    </div>
+
+</div>
+
+<div id="blockTwo">
+    <!-- High score -- where go choice, movement rules, die, end turn -- notes -->
+
+    <div id="blockMove">
+
+
+    </div>
+
+
+</div>
+
+
+    
+</body>
+
+
+
+</html>
