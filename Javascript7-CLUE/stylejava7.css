@@ -44,13 +44,34 @@ img{
 
 #room{
     font-size: 2em;
-    margin: 0;
+    width: 15vw;
 }
 #person{
     font-size: 2em;
-    
+    width: 15vw;
 }
 #weapon{
     font-size: 2em;
+    width: 15vw;
+}
+
+
+.button{
     
+    background-color: white;
+    padding: 3px;
+    border: 1px solid black;
+
+
+}
+
+.button:hover{
+    
+    background-color: yellow;
+    cursor: pointer;
+
+
+
+
+
 }
