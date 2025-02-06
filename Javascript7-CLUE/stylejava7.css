@@ -29,6 +29,7 @@
     background-color: white;  
     position: fixed;
     top: 45vh;
+    bottom: 80vh;
     width: 20vw;
 
 
@@ -71,7 +72,67 @@ img{
     cursor: pointer;
 
 
+}
 
+/* add and remove class for buttons */
+.disabled{
+
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.button1{
+    
+    background-color: rgb(228, 228, 228);
+    padding: 3px;
+    border: 1px solid black;
+
+
+}
+
+.button1:hover{
+    
+    background-color: rgb(153, 153, 153);
+    cursor: pointer;
+
+
+}
+
+
+#blockInfo{
+    background-color: white;
+    position: fixed;
+    top: .5vh;
+    bottom: 10vh;
+
+    left: 21vw;
+    width: 39vw;
+
+}
+
+#newInfo{
+
+    position: fixed;
+    top: 10vh;
+    bottom: 19.5vh;
+
+    left: 25vw;
+    width: 20vw;
+    overflow-y: scroll;
+    border: 2px solid white;
+
+}
+
+#itemList{
+    position: fixed;
+    top: 1.5vh;
+    bottom: 11vh;
+
+    left: 49vw;
+    width: 10vw;
+    overflow-y: scroll;
+    border: 2px solid black;
 
 
 }
