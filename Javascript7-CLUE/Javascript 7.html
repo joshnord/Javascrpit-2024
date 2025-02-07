@@ -125,6 +125,12 @@
 
     <div id="blockTurnOrder">
 
+        <div id="PeacockTurn">Peacock</div>
+        <div id="PlumTurn">Plum</div>
+        <div id="MustardTurn">Mustard</div>
+        <div id="WhiteTurn">White</div>
+        <div id="GreenTurn">Green</div>
+        <div id="ScarletTurn">Scarlet</div>
 
     </div>
 
@@ -133,10 +139,64 @@
 <div id="blockTwo">
     <!-- High score -- where go choice, movement rules, die, end turn -- notes -->
 
-    <div id="blockMove">
+
+        <div id="blockHighScore">
+
+        High Score: 
+
+        </div>
 
 
+        <div id="blockMove">
+            <div id="blockTurnNumber">Turn Number:</div>
+            
+            <div id = "blockMoveSelect">
+                <select name="room" id="roomTwo">
+                    <option value="">Where do you want to go?</option>
+                    <option value="Hall">Hall</option>
+                    <option value="Lounge">Lounge</option>
+                    <option value="Study">Study</option>
+                    <option value="Library">Library</option>
+                    <option value="Dining Room">Dining Room</option>
+                    <option value="Billards Room">Billards Room</option>
+                    <option value="Ballroom">Ballroom</option>
+                    <option value="Conservatory">Conservatory</option>
+                    <option value="Kitchen">Kitchen</option>
+            
+                </select>
+            </div> 
+
+            <div id = "blockMoveRules">
+                <div> Hallway to Room: 75% chance 2-4</div>
+                <!-- random # generator
+                    if ( (# + 1) % 4 == 0)
+                    roll = 1
+                    if ( (# + 2) % 4 == 0)
+                    roll = 2
+                    if ( (# + 3) % 4 == 0)
+                    roll = 3
+                    if ( (# + 4) % 4 == 0)  
+                    roll = 4
+                -->
+                <div> Failure to move: 25% chance 1</div>
+                <div> Room to Room: 25% chance 4</div>
+                <div> Room to Hallway: 50% chance 2-3</div>
+            </div>
+
+            <!-- image here -->
+
+
+            <span class="button2" onclick="endTurn()">End Turn</span>
+
+        </div>
+    
+    
+    <div id="blockNotes">
+        Notes:
+        <input type="text" id="notes" placeholder="">
     </div>
+
+
 
 
 </div>
