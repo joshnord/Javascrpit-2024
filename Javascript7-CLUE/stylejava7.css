@@ -37,10 +37,17 @@
 
 
 img{
-    max-width: 20vw;
+    width: inherit;
     padding-left: .5vw;
     padding-right: .5vw;
     max-height: 40vh;
+}
+.imgdie{
+    width: 190px;
+}
+.imgleft{
+    max-width: 20vw; 
+        /* TODO:image does not resize with width */
 }
 
 #room{
@@ -233,7 +240,9 @@ img{
 
 #roomTwo{
     font-size: 1.8em;
-    width: 180px;
+    width: 200px;
+/* 
+    width: 17.5vw; */
 }
 
 
@@ -249,14 +258,22 @@ img{
 
 }
 
+#blockScore{
+    position: fixed;
+    top: .5vh;
+    left: calc(62vw + 200px);
+    padding: .75vh;
+}
+
 
 #blockMove{
     position: fixed;
     top: 8vh;
     bottom: 0vh;
     left: 62vw;
-    width: 36vw;
-    /* border: 2px solid black; */
+    /* width: 36vw; */
+    width: 210px;
+    border: 2px solid black;
 
 }
 
@@ -266,7 +283,8 @@ img{
     top: 8vh;
     bottom: 85vh;
     left: 62vw;
-    width: 15vw;
+    /* width: 15vw; */
+    width: 200px;
     text-align: center;
     background-color: white;
 
@@ -276,28 +294,48 @@ img{
 #blockMoveSelect{
     position: fixed;
     top: 17vh;
-    
 
 }
 
 
 #blockMoveRules{
     position: fixed;
-    top: 93vh;
-    bottom: 3vh;
-    left: 47vw;
-    width: 6vw;
+    top: 22vh;
     text-align: center;
+    padding: 2px;
     background-color: white;
+    font-size: .9em;
 
+}
+
+.button3{
+    position: fixed;
+    top: 40vh;
+    bottom: 20vh;
+    left: calc(62vw + 5px);
+    width: 200px;
+    background-color: white;
+    text-align: center;
+
+}
+
+#blockMoveDisplay{
+    position: fixed;
+    top: 81vh;
+    bottom: 14vh;
+    left: calc(62vw + 5px);
+    width: 200px;
+    background-color: white;
+    text-align: center;
 }
 
 .button2{
     position: fixed;
     top: 93vh;
     bottom: 3vh;
-    left: 47vw;
-    width: 6vw;
+    left: calc(62vw + 55px);
+    width: 100px;
+    background-color: white;
     text-align: center;
 
 }
@@ -305,12 +343,25 @@ img{
 
 #blockNotes{
     position: fixed;
-    top: 93vh;
-    bottom: 3vh;
-    left: 47vw;
-    width: 6vw;
+    top: 8vh;
+    bottom: .5vh;
+    right: 1vw;
+    width: calc(35vw - 200px);
     text-align: center;
     background-color: white;
+    /* border: 2px solid black; */
+
+
+}
+
+#notes{
+    
+
+    width: calc(34vw - 200px);
+    text-align: center;
+    background-color: white;
+    overflow-y: scroll;
+    border: 2px solid black;
 
 
 }

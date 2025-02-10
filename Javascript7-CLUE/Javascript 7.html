@@ -112,6 +112,13 @@
             <div id="weaponMenu">
                 <span class="button1" onclick="weaponExpand()">Weapons</span>
             </div>
+                <!-- <div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    e
+                </div> --> <!--proof that scroll works-->
             <!-- these need names + dropdown to pick person -- objects will turn color of name but stay same txt-->
 
 
@@ -144,6 +151,10 @@
 
         High Score: 
 
+
+        <div id="blockScore">
+            Score:
+        </div>
         </div>
 
 
@@ -167,7 +178,7 @@
             </div> 
 
             <div id = "blockMoveRules">
-                <div> Hallway to Room: 75% chance 2-4</div>
+                
                 <!-- random # generator
                     if ( (# + 1) % 4 == 0)
                     roll = 1
@@ -179,11 +190,27 @@
                     roll = 4
                 -->
                 <div> Failure to move: 25% chance 1</div>
-                <div> Room to Room: 25% chance 4</div>
                 <div> Room to Hallway: 50% chance 2-3</div>
+                <div> Hallway to Room: 75% chance 2-4</div>
+                <div> Room to Room: 25% chance 4</div>
+                
             </div>
 
             <!-- image here -->
+
+            <!-- <span class="button3" onclick="move()">img</span> -->
+            <!-- <button onclick="move()">
+                <img src="../images/elevator1.png" />
+              </button> -->
+              <span class="button3" onclick="move()">
+                
+                <div class="imgdie">
+                    <img src="../images/D4.jpeg" 
+                    alt = "4 sided die"/>
+                </div>
+              </span>
+
+            <div id = "blockMoveDisplay"></div>    
 
 
             <span class="button2" onclick="endTurn()">End Turn</span>
@@ -192,8 +219,11 @@
     
     
     <div id="blockNotes">
-        Notes:
-        <input type="text" id="notes" placeholder="">
+        <!-- Notes: -->
+        <!-- <input type="text" id="notes" placeholder=""> -->
+        <label for="notes">Notes:</label>
+
+        <textarea id="notes" name="notes" rows="58" cols="50"></textarea>
     </div>
 
 

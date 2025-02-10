@@ -1,3 +1,21 @@
+// function question{
+//  if (accuse != true){
+
+//      if (location != hallway){
+//      suspect()
+//      }
+//  }
+//      else{
+//      accuse()
+//      }
+//  }
+
+function move(){
+    alert("hi");
+
+
+}
+
 function playerOneSuspect(){
     newInfo.innerText= "hello world";
 
