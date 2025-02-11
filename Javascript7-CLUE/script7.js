@@ -58,7 +58,7 @@ function question(){
     let accuse = document.querySelector("#accuse");
     console.log(accuse.checked);
     
-    if (accuse.value != true){
+    if (accuse.checked != true){
         if (location != "Hallway"){
         playerOneSuspect()
         console.log("playerOneSuspect()");
@@ -68,7 +68,7 @@ function question(){
         }
     }
     else{
-        accuse()
+        accusePlz()
         console.log("accuse");
     }
 }
@@ -77,7 +77,7 @@ function playerOneSuspect(){
 
 
 }
-function accuse(){
+function accusePlz(){
 
 
 }
