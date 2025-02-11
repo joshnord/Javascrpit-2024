@@ -1,3 +1,31 @@
+
+
+
+
+
+
+
+/* add and remove class for buttons */
+.disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+
+.hidden{
+
+}
+
+
+
+
+
+
+
+
+
 #blockOne{
     background-color: #12a22a;
     position: fixed;
@@ -40,13 +68,14 @@ img{
     width: inherit;
     padding-left: .5vw;
     padding-right: .5vw;
-    max-height: 40vh;
+    /* max-height: 40vh; */
 }
 .imgdie{
     width: 190px;
+ 
 }
 .imgleft{
-    max-width: 20vw; 
+    width: 20vw; 
         /* TODO:image does not resize with width */
 }
 
@@ -61,6 +90,12 @@ img{
 #weapon{
     font-size: 2em;
     width: 15vw;
+}
+
+
+#accuseCheck{
+    width: 15vw;
+    background-color: white;
 }
 
 
@@ -80,13 +115,17 @@ img{
 
 
 }
-
-/* add and remove class for buttons */
-.disabled{
-
-    opacity: 0.6;
-    cursor: not-allowed;
+.button1:hover{
+    background-color: yellow;
+    cursor: pointer;
 }
+.button2:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+
+
 
 
 .button1{
@@ -321,7 +360,7 @@ img{
 
 #blockMoveDisplay{
     position: fixed;
-    top: 81vh;
+    top: 80vh;
     bottom: 14vh;
     left: calc(62vw + 5px);
     width: 200px;

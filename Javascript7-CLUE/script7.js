@@ -1,23 +1,83 @@
-// function question{
-//  if (accuse != true){
 
-//      if (location != hallway){
-//      suspect()
-//      }
-//  }
-//      else{
-//      accuse()
-//      }
-//  }
 
+
+
+
+
+
+// list of all items can be static'
+// who has hand must be... objects?
+
+
+// list of all possible cards in an array, numbered 0-20
+
+// choose random # from 0-5, 6-14, 15-20 ==> this is truth
+// go by character --> choose random 18/player# cards (default 4)
+// each card: delete from "deck" array and add player-name to card-object
+
+
+
+
+
+//necessary arrays:
+//origin
+//deck, for dealing -- only used to deal; populated from origin every time
+//
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max + 1);
+  }
+
+
+
+
+var locationPlayer = "Hallway";
 function move(){
-    alert("hi");
+    var moveValue = getRandomInt(4);
+    
+    if (moveValue == 1){
+        locationPlayer = locationPlayer;
+    }
+    else if ((moveValue == 2 || moveValue == 3) && locationPlayer == "Hallway"){
+        locationPlayer = "Room";
+    }
+    else if ((moveValue == 2 || moveValue == 3) && locationPlayer == "Room"){
+        locationPlayer = "Hallway";
+    }
+    else if (moveValue == 4){
+        locationPlayer = "Room";
+    }
+    alert(moveValue + "loated at" + locationPlayer);
+}
+
+
+
+
+function question(){
+    let accuse = document.querySelector("#accuse");
+    console.log(accuse.checked);
+    
+    if (accuse.value != true){
+        if (location != "Hallway"){
+        playerOneSuspect()
+        console.log("playerOneSuspect()");
+        }
+        else{
+        console.log("location = hallway");
+        }
+    }
+    else{
+        accuse()
+        console.log("accuse");
+    }
+}
+function playerOneSuspect(){
+    newInfo.innerText= "hello world";
 
 
 }
-
-function playerOneSuspect(){
-    newInfo.innerText= "hello world";
+function accuse(){
 
 
 }
@@ -25,7 +85,7 @@ function playerOneSuspect(){
 
 
 function personExpand(){
-
+    alert("hellllo");
 
 }
 
@@ -43,31 +103,19 @@ function weaponExpand(){
 
 
 
+// if roomTwo is a non-default value, class disabled is turned off 
+// roomTwo is reset to default at end of turn 
+// and disabled until turn start
+function endTurn(){
+    alert("helour");
+
+    roomTwo.classList.add("disabled");
+    roomTwo.value = "";
+
+}
 
 
-// Mrs. Peacock
-// Pr. Plum
-// Col Mustard
-// Mrs. White
-// Mr. Green
-// Ms. Scarlet
 
-// Hall
-// Lounge
-// Study
-// Library
-// Dining Room
-// Billards Room
-// Ballroom
-// Conservatory
-// Kitchen
-
-// Knife
-// Lead Pipe
-// Rope
-// Revolver
-// Wrench
-// Candlestick
 
 
 
@@ -115,103 +163,31 @@ window.onload = function createArrays(){
 
 
 
-// // everything past this is weird
-
-
-// function openWeapons(){
-//     //deletes ALL elements in table 
-//     document.querySelector("#weaponMenu").innerHTML = "";
-//     console.log ("redo!");  
-
-//     for (var t = 0; t < arrayWeapons.length; t++){
-
-//             //sublist maybe a ul?
-//             // ul    //start hidden, positioned absolute -- object is position relative
-//                 // li -> person1
-//                 // li -> person2
-
-
-//         var weapon = document.createElement("weapon");
-//         weapon.innerText = arrayWeapons[t].name; 
-//         weapon.setAttribute("onclick", "doSomething(this)");
-//         weapon.dataset.index = t;  
-        
-//         if(arrayOne[t].doneness == true){
-//             weapon.classList.add(hideThing?"hide":"done");
-//         }
-
-//         var exx = document.createElement("span");
-//         exx.innerText = "X";
-//         exx.classList.add("exx");
-//         exx.addEventListener("click", doSomethingElse);
-
-//         var myList = document.querySelector("#list");
-//         weapon.appendChild(exx);
-//         myList.appendChild(weapon);
-
-
-
-        
-
-//         // if(arrayOne[t].doneness == true){
-//         //     
-//         // }
-//         // if(arrayOne[i].doneness == false){
-//         //     arrayOne[i].classList.remove("hide");
-//         // }
-
-
-//     }
-    
-//     saveData();
-// }
 
 
 
 
 
+// Mrs. Peacock
+// Pr. Plum
+// Col Mustard
+// Mrs. White
+// Mr. Green
+// Ms. Scarlet
 
-// function weaponExpand(){
+// Hall
+// Lounge
+// Study
+// Library
+// Dining Room
+// Billards Room
+// Ballroom
+// Conservatory
+// Kitchen
 
-
-
-
-//     let newName = cardName.value;
-//     let newOwner = cardOwner.value;
-
-//     let newWeapon = {
-//         name: newName, 
-//         owner: newOwner,
-
-//     }
-
-
-
-
-//     weaponMenu.innerHTML = "";
-//     listObjects(Weapons); //not perfect method here
-
-// }
-
-
-// function listObjects(){
-//     //loo phrough everything in rolls
-
-//     let leftBar = document.querySelector("#leftBar");
-//     //loop through tape rlls for each, create element   add a click event to get details   add a data-index property     //add add an appropriatte class   //add to to rolls
-//     for (var i=0; i < tapeRolls.length; i++){
-//             let divRoll = document.createElement("div");
-//             divRoll.dataset.index = i;
-
-
-//             divRoll.innerText = tapeRolls[i].name;
-
-//             divRoll.classList.add("tape");
-//             divRoll.classList.add(tapeRolls[i].type)
-
-//             leftBar.appendChild(divRoll);
-//     }
-
-// }
-
-
+// Knife
+// Lead Pipe
+// Rope
+// Revolver
+// Wrench
+// Candlestick

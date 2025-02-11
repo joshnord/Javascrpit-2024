@@ -33,9 +33,9 @@
         <div id="blockAccuse">
             
             
-                <div>
+                <div id = "accuseCheck">
                   <label for="accuse">ACCUSE</label>
-                  <input type="checkbox" id="accuse" name="accuse" checked />
+                  <input type="checkbox" id="accuse" name="accuse" unchecked />
                   
                 </div>
                 <div>
@@ -77,7 +77,7 @@
             
                 </select>
                 </div>
-                <span class="button" onclick="playerOneSuspect()">+</span>
+                <span class="button" onclick="question()">+</span>
 
 
         </div>
@@ -148,7 +148,7 @@
 
 
         <div id="blockHighScore">
-
+<!-- at succesfful accuse, update this: if lower, replace; if higher, nothing -->
         High Score: 
 
 
