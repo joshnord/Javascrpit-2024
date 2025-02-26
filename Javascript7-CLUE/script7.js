@@ -1,6 +1,6 @@
 
 
-var playerA = "Mr. Green"
+
 
 
 
@@ -171,15 +171,85 @@ function getRandomInt(max) {
 
 
 
+function chooseScarlet(){
+    var playerA = "Ms. Scarlet";
+    var playerB = "Mrs. Peacock";
+    var playerC = "Pr. Plum";
+    var playerD = "Col Mustard";
+    var playerE = "Mrs. White";
+    var playerF = "Mr. Green";
+    hideWelcome();
+    deal();
+}
+function chooseGreen(){
+    var playerA = "Mr. Green";
+    var playerB = "Ms. Scarlet";
+    var playerC = "Mrs. Peacock";
+    var playerD = "Pr. Plum";
+    var playerE = "Col Mustard";
+    var playerF = "Mrs. White";
+    hideWelcome();
+    deal();
+}
+function chooseWhite(){
+    var playerA = "Mrs. White";
+    var playerB = "Mr. Green";
+    var playerC = "Ms. Scarlet";
+    var playerD = "Mrs. Peacock";
+    var playerE = "Pr. Plum";
+    var playerF = "Col Mustard";
+    hideWelcome();
+    deal();
+}
+function chooseMustard(){
+    var playerA = "Col Mustard";
+    var playerB = "Mrs. White";
+    var playerC = "Mr. Green";
+    var playerD = "Ms. Scarlet";
+    var playerE = "Mrs. Peacock";
+    var playerF = "Pr. Plum";
+    hideWelcome();
+    deal();
+}
+function choosePlum(){
+    var playerA = "Pr. Plum";
+    var playerB = "Col Mustard";
+    var playerC = "Mrs. White";
+    var playerD = "Mr. Green";
+    var playerE = "Ms. Scarlet";
+    var playerF = "Mrs. Peacock";
+    hideWelcome();
+    deal();
+}
+function choosePeacock(){
+    var playerA = "Mrs. Peacock";
+    var playerB = "Pr. Plum";
+    var playerC = "Col Mustard";
+    var playerD = "Mrs. White";
+    var playerE = "Mr. Green";
+    var playerF = "Ms. Scarlet";
+    hideWelcome();
+    deal();
+}
+
+
+
+function hideWelcome(){
+
+
+
+}
+
 
 
 function deal(){
+
     //give 3 to holder of each kind 
     accuseContainer.person = (getRandomInt(6) - 1);
     accuseContainer.weapon = (getRandomInt(6) + 5);  
     accuseContainer.room = (getRandomInt(9) + 11);
 
-    console.log(accuseContainer)
+    console.log(accuseContainer);
     //truth set
 
 
@@ -287,75 +357,111 @@ function movePlayerN(bob){
 
 
 
-    //roomTwo.value is Player 1 specific
-   if (roomChoice != "" && roomChoice != playerLocation){ 
-    if (moveValue == 1){
-        locationPlayer = locationPlayer;
-    }
-    else if ((moveValue == 2 || moveValue == 3) && locationPlayer == "Hallway"){
-        locationPlayer = "Room";
-    }
-    else if ((moveValue == 2 || moveValue == 3) && locationPlayer == "Room"){
-        locationPlayer = "Hallway";
-    }
-    else if (moveValue == 4){
-        locationPlayer = "Room";
-    }
-    if (locationPlayer == "Room" && moveValue != 1){
-    alert(moveValue + "; located at " + locationPlayer + ": " + roomChoice);
-    playerLocation = roomChoice;
-    }
-    else if (locationPlayer == "Hallway"){
-    alert(moveValue + "; located at " + locationPlayer);
-    playerLocation = "Hallway";
-    }
-    else if (locationPlayer == "Room" && moveValue == 1){
-    alert(moveValue + "; located at " + locationPlayer);
-    playerLocation = "Room";
-    }
-   }
-   else{
-    alert ("select different target");
-   }
+            //roomTwo.value is Player 1 specific
+        if (roomChoice != "" && roomChoice != playerLocation){ 
+            if (moveValue == 1){
+                locationPlayer = locationPlayer;
+            }
+            else if ((moveValue == 2 || moveValue == 3) && locationPlayer == "Hallway"){
+                locationPlayer = "Room";
+            }
+            else if ((moveValue == 2 || moveValue == 3) && locationPlayer == "Room"){
+                locationPlayer = "Hallway";
+            }
+            else if (moveValue == 4){
+                locationPlayer = "Room";
+            }
 
+            if (locationPlayer == "Room" && moveValue != 1){
+            alert(moveValue + "; located at " + locationPlayer + ": " + roomChoice);
+            playerLocation = roomChoice;
+            }
+            else if (locationPlayer == "Hallway"){
+            alert(moveValue + "; located at " + locationPlayer);
+            playerLocation = "Hallway";
+            }
+            else if (locationPlayer == "Room" && moveValue == 1){
+            alert(moveValue + "; located at " + locationPlayer);
+            playerLocation = playerLocation;
+            }
+        }
+        else{
+            alert ("select different target");
+        }
 
+console.log("playerLocation = " + playerLocation + ", locationPlayer = " + locationPlayer);
    
+//playerLocation is name of location
+//location player is type of location
+
+
    ///////////////////////
-if(bob == 'A'){
-    locationPlayerA = locationPlayer;
-   if (playerLocation != "Room"){
-   playerLocationA = playerLocation;
-   }
-    if (playerLocation == "Hallway"){
-    newInfo.innerText = playerA + " is in the " + "Hallway";
-    }
-    else if (playerLocation != roomChoice){
-    newInfo.innerText = playerA + " is in the " + playerLocationA;
-    }
-    else {
-    newInfo.innerText = playerA + " is in the " + roomChoice;
-    }
-}
-else if(bob == 'B'){
-    locationPlayerB = locationPlayer;
-    playerLocationB = playerLocation;
-}
-else if(bob == 'C'){
-    locationPlayerC = locationPlayer;
-    playerLocationC = playerLocation;
-}    
-else if(bob == 'D'){
-    locationPlayerD = locationPlayer;
-    playerLocationD = playerLocation;
-}
-else if(bob == 'E'){
-    locationPlayerE = locationPlayer;
-    playerLocationE = playerLocation;
-}
-else if(bob == 'F'){
-    locationPlayerF = locationPlayer;
-    playerLocationF = playerLocation;
-}
+        if(bob == 'A'){
+            locationPlayerA = locationPlayer;
+            playerLocationA = playerLocation;
+
+            if (playerLocation == "Hallway"){
+            newInfo.innerText = playerA + " is in the " + "Hallway";
+            }
+            else {
+            newInfo.innerText = playerA + " is in the " + playerLocationA;
+            }
+        }
+        else if(bob == 'B'){
+            locationPlayerB = locationPlayer;
+            playerLocationB = playerLocation;
+
+            if (playerLocation == "Hallway"){
+            newInfo.innerText = playerB + " is in the " + "Hallway";
+            }
+            else {
+            newInfo.innerText = playerB + " is in the " + playerLocationB;
+            }
+        }        
+        else if(bob == 'C'){
+            locationPlayerC = locationPlayer;
+            playerLocationC = playerLocation;
+
+            if (playerLocation == "Hallway"){
+            newInfo.innerText = playerC + " is in the " + "Hallway";
+            }
+            else {
+            newInfo.innerText = playerC + " is in the " + playerLocationC;
+            }
+        }
+        else if(bob == 'D'){
+            locationPlayerD = locationPlayer;
+            playerLocationD = playerLocation;
+
+            if (playerLocation == "Hallway"){
+            newInfo.innerText = playerD + " is in the " + "Hallway";
+            }
+            else {
+            newInfo.innerText = playerD + " is in the " + playerLocationD;
+            }
+        }
+        else if(bob == 'E'){
+            locationPlayerE = locationPlayer;
+            playerLocationE = playerLocation;
+
+            if (playerLocation == "Hallway"){
+            newInfo.innerText = playerE + " is in the " + "Hallway";
+            }
+            else {
+            newInfo.innerText = playerE + " is in the " + playerLocationE;
+            }
+        }
+        else if(bob == 'F'){
+            locationPlayerF = locationPlayer;
+            playerLocationF = playerLocation;
+
+            if (playerLocation == "Hallway"){
+            newInfo.innerText = playerF + " is in the " + "Hallway";
+            }
+            else {
+            newInfo.innerText = playerF + " is in the " + playerLocationF;
+            }
+        }
 
 
    
