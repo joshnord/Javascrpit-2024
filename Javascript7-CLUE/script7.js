@@ -1,11 +1,14 @@
+//array for grabbing cards by #
+//array for deleting cards from to deal -- grab from cards by #
+//array from dealing -- 1-3 is accuse, 4-6 is player A...
+//arrays for what each player knows
 
 
 
 
 
 
-
-
+var turnCount = 0;
 
 var realPerson = 30;
 var realRoom = 30;
@@ -78,7 +81,7 @@ var plum = {
     cardNumber: 1,
 }
 var mustard = {
-    cardName: "Col Mustard", 
+    cardName: "Col. Mustard", 
     cardNumber: 2,
 }
 var white = {
@@ -170,64 +173,71 @@ function getRandomInt(max) {
 
 
 
-
+var playerChoiceArray = ["Ms. Scarlet", "Mrs. Peacock", 
+"Pr. Plum", "Col. Mustard", "Mrs. White", "Mr. Green"]
+    var playerA = "";
+    var playerB = "";
+    var playerC = "";
+    var playerD = "";
+    var playerE = "";
+    var playerF = "";
 function chooseScarlet(){
-    var playerA = "Ms. Scarlet";
-    var playerB = "Mrs. Peacock";
-    var playerC = "Pr. Plum";
-    var playerD = "Col Mustard";
-    var playerE = "Mrs. White";
-    var playerF = "Mr. Green";
+    playerA = playerChoiceArray[0];
+    playerB = playerChoiceArray[1];
+    playerC = playerChoiceArray[2];
+    playerD = playerChoiceArray[3];
+    playerE = playerChoiceArray[4];
+    playerF = playerChoiceArray[5];
     hideWelcome();
     deal();
 }
 function chooseGreen(){
-    var playerA = "Mr. Green";
-    var playerB = "Ms. Scarlet";
-    var playerC = "Mrs. Peacock";
-    var playerD = "Pr. Plum";
-    var playerE = "Col Mustard";
-    var playerF = "Mrs. White";
+    playerA = playerChoiceArray[5];
+    playerB = playerChoiceArray[0];
+    playerC = playerChoiceArray[1];
+    playerD = playerChoiceArray[2];
+    playerE = playerChoiceArray[3];
+    playerF = playerChoiceArray[4];
     hideWelcome();
     deal();
 }
 function chooseWhite(){
-    var playerA = "Mrs. White";
-    var playerB = "Mr. Green";
-    var playerC = "Ms. Scarlet";
-    var playerD = "Mrs. Peacock";
-    var playerE = "Pr. Plum";
-    var playerF = "Col Mustard";
+    playerA = playerChoiceArray[4];
+    playerB = playerChoiceArray[5];
+    playerC = playerChoiceArray[0];
+    playerD = playerChoiceArray[1];
+    playerE = playerChoiceArray[2];
+    playerF = playerChoiceArray[3];
     hideWelcome();
     deal();
 }
 function chooseMustard(){
-    var playerA = "Col Mustard";
-    var playerB = "Mrs. White";
-    var playerC = "Mr. Green";
-    var playerD = "Ms. Scarlet";
-    var playerE = "Mrs. Peacock";
-    var playerF = "Pr. Plum";
+    playerA = playerChoiceArray[3];
+    playerB = playerChoiceArray[4];
+    playerC = playerChoiceArray[5];
+    playerD = playerChoiceArray[0];
+    playerE = playerChoiceArray[1];
+    playerF = playerChoiceArray[2];
     hideWelcome();
     deal();
 }
 function choosePlum(){
-    var playerA = "Pr. Plum";
-    var playerB = "Col Mustard";
-    var playerC = "Mrs. White";
-    var playerD = "Mr. Green";
-    var playerE = "Ms. Scarlet";
-    var playerF = "Mrs. Peacock";
+    playerA = playerChoiceArray[2];
+    playerB = playerChoiceArray[3];
+    playerC = playerChoiceArray[4];
+    playerD = playerChoiceArray[5];
+    playerE = playerChoiceArray[0];
+    playerF = playerChoiceArray[1];
     hideWelcome();
     deal();
 }
 function choosePeacock(){
-    var playerA = "Mrs. Peacock";
-    var playerB = "Pr. Plum";
-    var playerC = "Col Mustard";
-    var playerD = "Mrs. White";
-    var playerE = "Mr. Green";
-    var playerF = "Ms. Scarlet";
+    playerA = playerChoiceArray[1];
+    playerB = playerChoiceArray[2];
+    playerC = playerChoiceArray[3];
+    playerD = playerChoiceArray[4];
+    playerE = playerChoiceArray[5];
+    playerF = playerChoiceArray[0];
     hideWelcome();
     deal();
 }
@@ -236,8 +246,8 @@ function choosePeacock(){
 
 function hideWelcome(){
 
-
-
+    welcomeScreen.classList.add("hidden");
+    console.log("playerA = " + playerA);
 }
 
 
@@ -314,7 +324,11 @@ var playerLocationF = "Hallway";
 
 
 function movePlayerN(bob){
+     
     
+    newInfo.innerText = "";
+
+
     var moveValue = getRandomInt(4);
     
         
@@ -389,22 +403,56 @@ function movePlayerN(bob){
             alert ("select different target");
         }
 
-console.log("playerLocation = " + playerLocation + ", locationPlayer = " + locationPlayer);
-   
+    console.log("playerLocation = " + playerLocation + ", locationPlayer = " + locationPlayer);
+    console.log(bob);
 //playerLocation is name of location
 //location player is type of location
+
+
+            if (playerLocation == 12){
+                playerLocation = "Hall";
+            }
+            else if (playerLocation == 13){
+                playerLocation = "Lounge";
+            }
+            else if (playerLocation == 14){
+                playerLocation = "Study";
+            }
+            else if (playerLocation == 15){
+                playerLocation = "Library";
+            }
+            else if (playerLocation == 16){
+                playerLocation = "Dining Room";
+            }
+            else if (playerLocation == 17){
+                playerLocation = "Billards Room";
+            }
+            else if (playerLocation == 18){
+                playerLocation = "Ballroom";
+            }
+            else if (playerLocation == 19){
+                playerLocation = "Conservatory";
+            }
+            else if (playerLocation == "Kitchen"){
+                playerLocation = 20;
+            }
 
 
    ///////////////////////
         if(bob == 'A'){
             locationPlayerA = locationPlayer;
             playerLocationA = playerLocation;
+            turnCount = turnCount + 1;
+            console.log(turnCount)
+            realTurnNumber.innerText = turnCount;
+            // var realTurnNumber = document.querySelector("#realTurnNumber");
+            // realTurnNumber.innerText = parseInt(realTurnNumber.innerText) + 1;
 
             if (playerLocation == "Hallway"){
-            newInfo.innerText = playerA + " is in the " + "Hallway";
+            newInfo.innerText += playerA + " is in the " + "Hallway";
             }
             else {
-            newInfo.innerText = playerA + " is in the " + playerLocationA;
+            newInfo.innerText += playerA + " is in the " + playerLocationA;
             }
         }
         else if(bob == 'B'){
@@ -477,12 +525,12 @@ console.log("playerLocation = " + playerLocation + ", locationPlayer = " + locat
 
 
 
-function question(){
+function questionA(){
     let accuse = document.querySelector("#accuse");
     console.log(accuse.checked);
     
     if (accuse.checked != true){
-        if (location != "Hallway"){
+        if (playerLocationA != "Hallway"){
         playerOneSuspect();
         console.log("playerOneSuspect()");
         }
@@ -496,7 +544,8 @@ function question(){
     }
 }
 function playerOneSuspect(){
-    newInfo.innerText= "hello world";
+    newInfo.innerText += ("\n" + playerA + " accused " + "Jeremy" + " in the " + "Garage" + " with the " + "table");
+
 
 
 }
@@ -555,7 +604,7 @@ var cardName, cardOwner
 window.onload = function createArrays(){
     arrayPeople = ["Mrs. Peacock",
     "Pr. Plum",
-    "Col Mustard",
+    "Col. Mustard",
     "Mrs. White",
     "Mr. Green",
     "Ms. Scarlet"
@@ -593,7 +642,7 @@ window.onload = function createArrays(){
 
 // Mrs. Peacock
 // Pr. Plum
-// Col Mustard
+// Col. Mustard
 // Mrs. White
 // Mr. Green
 // Ms. Scarlet

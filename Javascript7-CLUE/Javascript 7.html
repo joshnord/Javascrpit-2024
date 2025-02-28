@@ -20,14 +20,16 @@
     <div id="characterChoose">
         <h3>Choose Your Character:</h3>
         
-    <span class="button" onclick="choosePeacock()">Peacock</span>
-    <span class="button" onclick="choosePlum()">Plum</span>
-    <span class="button" onclick="chooseMustard()">Mustard</span>
-    <span class="button" onclick="chooseWhite()">White</span>
-    <span class="button" onclick="chooseGreen()">Green</span>
-    <span class="button" onclick="chooseScarlet()">Scarlet</span>
-    <span class="button" onclick="Load()">Load Game</span>
+    <span class="button4" onclick="choosePeacock()">Peacock</span>
+    <span class="button4" onclick="choosePlum()">Plum</span>
+    <span class="button4" onclick="chooseMustard()">Mustard</span>
+    <span class="button4" onclick="chooseWhite()">White</span>
+    <span class="button4" onclick="chooseGreen()">Green</span>
+    <span class="button4" onclick="chooseScarlet()">Scarlet</span>
+    <span class="button4" onclick="Load()">Load Game</span>
     </div>
+
+    <div id="clueTextWelcome">CLUE</div>
 
 </div>
 
@@ -58,7 +60,7 @@
                     <option value="">Person</option>
                     <option value="Mrs. Peacock">Mrs. Peacock</option>
                     <option value="Pr. Plum">Pr. Plum</option>
-                    <option value="Col Mustard">Col Mustard</option>
+                    <option value="Col. Mustard">Col. Mustard</option>
                     <option value="Mrs. White">Mrs. White</option>
                     <option value="Mr. Green">Mr. Green</option>
                     <option value="Ms. Scarlet">Ms. Scarlet</option>
@@ -92,7 +94,7 @@
             
                 </select>
                 </div>
-                <span class="button" onclick="question()">+</span>
+                <span class="button" onclick="questionA()">+</span>
 
 
 
@@ -184,7 +186,10 @@
 
 
         <div id="blockMove">
-            <div id="blockTurnNumber">Turn Number:</div>
+            <div id="blockTurnNumber">Turn Number:
+
+                <div id="realTurnNumber">0</div>
+            </div>
             
             <div id = "blockMoveSelect">
                 <select name="room" id="roomTwo">

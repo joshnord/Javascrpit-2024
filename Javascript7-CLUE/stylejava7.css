@@ -15,13 +15,28 @@
 #characterChoose{
     background-color: #ffffff;
     position: fixed;
-    top: 1vh;
-    height: 250px;
+    top: 10vh;
+    height: 700px;
 
-    left: 5px;
-    width: 90px;
+    left: 10px;
+    width: 200px;
     z-index: 11;
 
+}
+
+h3{
+    padding: 10px;
+    font-size: 2em;
+}
+
+#clueTextWelcome{
+    transform: rotate(40deg);
+    font-size: 28em;
+    z-index: 11;
+    color: white;
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
 }
 
 
@@ -35,7 +50,7 @@
 
 
 .hidden{
-
+    display: none;
 }
 
 
@@ -96,7 +111,6 @@ img{
 }
 .imgleft{
     width: 20vw; 
-        /* TODO:image does not resize with width */
 }
 
 #room{
@@ -135,7 +149,16 @@ img{
 
 
 }
-.button1:hover{
+.button4{
+    display: block;
+    background-color: white;
+    padding: 6px;
+    border: 1px solid black;
+    margin: 10px;
+
+    font-size: 2em;
+}
+.button4:hover{
     background-color: yellow;
     cursor: pointer;
 }
