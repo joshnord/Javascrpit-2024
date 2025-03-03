@@ -72,6 +72,10 @@ var charSix = {
 
 
 
+
+
+
+
 var peacock = {
     cardName: "Mrs. Peacock", 
     cardNumber: 0,
@@ -163,6 +167,36 @@ var kitchen = {
 
 
 
+//source of cards
+var deckOne = [];
+
+deckOne.push(peacock, plum, mustard, white, green, scarlet,
+    knife, leadPipe, rope, revolver, wrench, candlestick, 
+    hall, lounge, study, library, diningRoom, billardsRoom, ballroom, conservatory, kitchen
+);
+
+var deckTwo = deckOne;
+
+for(var i = 0; i < deckOne.length; i++){
+    console.log("deckOne = ", deckOne[i]);
+}
+for(var i = 0; i < deckTwo.length; i++){
+    console.log("deckTwo = ", deckTwo[i]);
+}
+
+var deckThree = [];
+//if pushed from deck1 to deck2 = accuse, cancel
+//deck2 has 18
+//choose random 0-17 from deck2 to push to deck3; delete that one from deck2
+//choose random 0-16 from deck2...
+//0-2 = playerA
+//3-5 = playerB
+var deckPlayerA = [];
+var deckPlayerB = [];
+var deckPlayerC = [];
+var deckPlayerD = [];
+var deckPlayerE = [];
+var deckPlayerF = [];
 
 
 
@@ -255,15 +289,38 @@ function hideWelcome(){
 function deal(){
 
     //give 3 to holder of each kind 
-    accuseContainer.person = (getRandomInt(6) - 1);
-    accuseContainer.weapon = (getRandomInt(6) + 5);  
-    accuseContainer.room = (getRandomInt(9) + 11);
-
+    accuseContainer.person = deckOne[getRandomInt(6) - 1];
+    accuseContainer.weapon = deckOne[getRandomInt(6) + 5];
+    accuseContainer.room = deckOne[getRandomInt(9) + 11];
     console.log(accuseContainer);
     //truth set
 
 
+
+
+    //add remaining cards to array in random order
+
+
+    // for (){}
+
+
+    // playerAArray
+
+
+
+    // need 6 arrays; each person gets 1 for everything they know
+    // when asked, they attempt to show cards indexed 0, 1, and 2
+    // these are the original 3 which they own
     
+    //each person has a deck of all the cards they know. 
+    //they start with 3 cards. 
+    //when asked to show a card, they can show index 0, 1, or 2
+    //say they know 12, 18, 5, and 4
+    //bobby suspects 4, 6, 18
+    //bobby askes them "is playerBArray 0 = 4, 6, or 18?"
+    //if no, "is playerBArray 1 = 4, 6, or 18?" & "is playerBArray 2 = 4, 6, or 18?"
+    //they cannot ask about playerBArray 3 because player B does not OWN card index 3
+    //then, questioning switches to the next person
 
 }
 
