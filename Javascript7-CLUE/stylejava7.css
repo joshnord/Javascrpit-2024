@@ -1,6 +1,128 @@
 
 
 
+
+
+
+
+/* ALL BUTTONS */
+
+/* add and remove class for buttons */
+.disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button{   
+    background-color: white;
+    padding: 3px;
+    border: 1px solid black;
+}
+.button:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+.button1{
+    background-color: rgb(228, 228, 228);
+    padding: 3px;
+    border: 1px solid black;
+}
+.button1:hover{
+    background-color: rgb(153, 153, 153);
+    cursor: pointer;
+}
+
+.button3{
+    position: fixed;
+    top: 40vh;
+    bottom: 20vh;
+    left: calc(62vw + 5px);
+    width: 200px;
+    background-color: white;
+    text-align: center;
+}
+.button4{
+    display: block;
+    background-color: white;
+    padding: 6px;
+    border: 1px solid black;
+    margin: 10px;
+    font-size: 2em;
+}
+.button4:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+.buttonEndTurn{
+    position: fixed;
+    top: 91vh;
+    bottom: 5vh;
+    left: calc(62vw + 55px);
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+.buttonEndTurn:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+.buttonNextTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: calc(62vw + 55px);
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+.buttonNextTurn:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+.buttonStay{
+    position: fixed;
+    top: 21.8vh;
+    bottom: 74.8vh;
+    left: calc(62vw + 55px);
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+}
+.buttonStay:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* welcome screen */
+
+.hidden{
+    display: none;
+}
+
 #welcomeScreen{
     background-color: #12a22a;
     position: fixed;
@@ -40,18 +162,7 @@ h3{
 }
 
 
-/* add and remove class for buttons */
-.disabled{
-    opacity: 0.6;
-    cursor: not-allowed;
-    pointer-events: none;
-}
 
-
-
-.hidden{
-    display: none;
-}
 
 
 
@@ -113,15 +224,15 @@ img{
     width: 20vw; 
 }
 
-#room{
+#roomSuspectSelect{
     font-size: 2em;
     width: 15vw;
 }
-#person{
+#personSuspectSelect{
     font-size: 2em;
     width: 15vw;
 }
-#weapon{
+#weaponSuspectSelect{
     font-size: 2em;
     width: 15vw;
 }
@@ -133,60 +244,7 @@ img{
 }
 
 
-.button{
-    
-    background-color: white;
-    padding: 3px;
-    border: 1px solid black;
 
-
-}
-
-.button:hover{
-    
-    background-color: yellow;
-    cursor: pointer;
-
-
-}
-.button4{
-    display: block;
-    background-color: white;
-    padding: 6px;
-    border: 1px solid black;
-    margin: 10px;
-
-    font-size: 2em;
-}
-.button4:hover{
-    background-color: yellow;
-    cursor: pointer;
-}
-.button2:hover{
-    background-color: yellow;
-    cursor: pointer;
-}
-
-
-
-
-
-.button1{
-    
-    background-color: rgb(228, 228, 228);
-    padding: 3px;
-    border: 1px solid black;
-
-
-}
-
-.button1:hover{
-    
-    background-color: rgb(153, 153, 153);
-    cursor: pointer;
-
-
-}
 
 
 #blockInfo{
@@ -382,7 +440,7 @@ img{
 
 #blockMoveRules{
     position: fixed;
-    top: 22vh;
+    top: 26vh;
     text-align: center;
     padding: 2px;
     background-color: white;
@@ -390,16 +448,7 @@ img{
 
 }
 
-.button3{
-    position: fixed;
-    top: 40vh;
-    bottom: 20vh;
-    left: calc(62vw + 5px);
-    width: 200px;
-    background-color: white;
-    text-align: center;
 
-}
 
 #blockMoveDisplay{
     position: fixed;
@@ -411,16 +460,6 @@ img{
     text-align: center;
 }
 
-.button2{
-    position: fixed;
-    top: 93vh;
-    bottom: 3vh;
-    left: calc(62vw + 55px);
-    width: 100px;
-    background-color: white;
-    text-align: center;
-
-}
 
 
 #blockNotes{

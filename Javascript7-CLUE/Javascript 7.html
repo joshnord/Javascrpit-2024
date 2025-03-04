@@ -56,7 +56,7 @@
                   
                 </div>
                 <div>
-                <select name="person" id="person">
+                <select name="person" id="personSuspectSelect">
                     <option value="">Person</option>
                     <option value="Mrs. Peacock">Mrs. Peacock</option>
                     <option value="Pr. Plum">Pr. Plum</option>
@@ -68,7 +68,7 @@
                 </select>
                 </div>
                 <div>
-                <select name="room" id="room">
+                <select name="room" id="roomSuspectSelect">
                     <option value="">Room</option>
                     <option value="Hall">Hall</option>
                     <option value="Lounge">Lounge</option>
@@ -83,7 +83,7 @@
                 </select>
                 </div> 
                 <div> 
-                <select name="weapon" id="weapon">
+                <select name="weapon" id="weaponSuspectSelect">
                     <option value="">Weapon</option>
                     <option value="Knife">Knife</option>
                     <option value="Lead Pipe">Lead Pipe</option>
@@ -100,11 +100,16 @@
 
 
 
-                <div></div>
-                <div></div>
-                <span class="button" onclick="deal()">Deal</span>
+
                 <div></div>
                 <span class="button" onclick="expandAllInfo()">Expand All Info</span>
+                <span class="button" onclick="movePlayerN('B')">movePlayerN('B')</span>
+                <span class="button" onclick="movePlayerN('C')">movePlayerN('C')</span>
+                <span class="button" onclick="movePlayerN('D')">movePlayerN('D')</span>
+                <span class="button" onclick="movePlayerN('E')">movePlayerN('E')</span>
+                <span class="button" onclick="movePlayerN('F')">movePlayerN('F')</span>
+
+
 
 
         </div>
@@ -205,8 +210,10 @@
                     <option value="Kitchen">Kitchen</option>
             
                 </select>
+                    <div id = "stayChoice">
+                    <span class="buttonStay" onclick="endMove()">Stay in Room</span>
+                    </div> 
             </div> 
-
             <div id = "blockMoveRules">
                 
                 <!-- random # generator
@@ -232,26 +239,22 @@
             <!-- <button onclick="move()">
                 <img src="../images/elevator1.png" />
               </button> -->
-              <span class="button3" onclick="movePlayerN('A')">
+            <div id = "blockMoveDisplay">
+                
+                
+                <span class="button3" onclick="movePlayerN('A')">
                 
                 <div class="imgdie">
                     <img src="../images/D4.jpeg" 
                     alt = "4 sided die"/>
                 </div>
-              </span>
+                </span>
+
+            </div>    
 
 
-              <span class="button" onclick="movePlayerN('B')">movePlayerN('B')</span>
-              <span class="button" onclick="movePlayerN('C')">movePlayerN('C')</span>
-              <span class="button" onclick="movePlayerN('D')">movePlayerN('D')</span>
-              <span class="button" onclick="movePlayerN('E')">movePlayerN('E')</span>
-              <span class="button" onclick="movePlayerN('F')">movePlayerN('F')</span>
-
-            <div id = "blockMoveDisplay"></div>    
-
-
-            <span class="button2" onclick="endTurn()">End Turn</span>
-
+            <span class="buttonEndTurn" onclick="endTurn()">End Turn</span>
+            <span class="buttonNextTurn" onclick="beginTurn()">Next Turn</span>
         </div>
     
     

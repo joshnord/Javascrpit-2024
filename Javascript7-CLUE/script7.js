@@ -282,6 +282,9 @@ function hideWelcome(){
 
     welcomeScreen.classList.add("hidden");
     console.log("playerA = " + playerA);
+    disableSuspectSelect();
+    stayChoice.classList.add("disabled");
+    
 }
 
 
@@ -499,18 +502,22 @@ function movePlayerN(bob){
         if(bob == 'A'){
             locationPlayerA = locationPlayer;
             playerLocationA = playerLocation;
-            turnCount = turnCount + 1;
-            console.log(turnCount)
-            realTurnNumber.innerText = turnCount;
+            
             // var realTurnNumber = document.querySelector("#realTurnNumber");
             // realTurnNumber.innerText = parseInt(realTurnNumber.innerText) + 1;
 
             if (playerLocation == "Hallway"){
             newInfo.innerText += playerA + " is in the " + "Hallway";
+            stayChoice.classList.add("disabled");
+            increaseTurnCount();
             }
             else {
             newInfo.innerText += playerA + " is in the " + playerLocationA;
+            stayChoice.classList.remove("disabled");
+            endMove();
             }
+            
+
         }
         else if(bob == 'B'){
             locationPlayerB = locationPlayer;
@@ -574,12 +581,31 @@ function movePlayerN(bob){
 
 
 
+function increaseTurnCount(){
+
+            turnCount = turnCount + 1;
+            console.log(turnCount);
+            realTurnNumber.innerText = turnCount;
+
+}
+
+
+
+function endMove(){
+            personSuspectSelect.classList.remove("disabled");
+            roomSuspectSelect.classList.remove("disabled");
+            weaponSuspectSelect.classList.remove("disabled");
+            moveHide();
+            increaseTurnCount();
+}
 
 
 
 
+// if (){
 
 
+// }
 
 
 function questionA(){
@@ -588,8 +614,8 @@ function questionA(){
     
     if (accuse.checked != true){
         if (playerLocationA != "Hallway"){
-        playerOneSuspect();
-        console.log("playerOneSuspect()");
+        playerASuspect();
+        console.log("playerASuspect()");
         }
         else{
         console.log("location = hallway");
@@ -600,9 +626,12 @@ function questionA(){
         console.log("accuse");
     }
 }
-function playerOneSuspect(){
-    newInfo.innerText += ("\n" + playerA + " accused " + "Jeremy" + " in the " + "Garage" + " with the " + "table");
-
+function playerASuspect(){
+    let personSuspect = document.querySelector("#personSuspectSelect").value;
+    let roomSuspect = document.querySelector("#roomSuspectSelect").value;
+    let weaponSuspect = document.querySelector("#weaponSuspectSelect").value;
+    newInfo.innerText += ("\n\n" + playerA + " suspects " + personSuspect + " in the " + roomSuspect + " with the " + weaponSuspect);
+    disableSuspectSelect();
 
 
 }
@@ -638,13 +667,31 @@ function weaponExpand(){
 function endTurn(){
     alert("helour");
 
-    roomTwo.classList.add("disabled");
+    moveHide()
     roomTwo.value = "";
-
+    disableSuspectSelect()
+    
+}
+function moveHide(){
+blockMoveSelect.classList.add("disabled");
+blockMoveDisplay.classList.add("disabled");
 }
 
+function moveShow(){
+    blockMoveSelect.classList.remove("disabled");
+    blockMoveDisplay.classList.remove("disabled");
+    }
 
-
+function disableSuspectSelect(){
+            personSuspectSelect.classList.add("disabled");
+            roomSuspectSelect.classList.add("disabled");
+            weaponSuspectSelect.classList.add("disabled");
+}
+function beginTurn(){
+            
+            moveShow()
+            disableSuspectSelect()
+}
 
 
 
