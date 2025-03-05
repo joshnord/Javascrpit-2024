@@ -199,6 +199,111 @@ var deckPlayerE = [];
 var deckPlayerF = [];
 
 
+function deal(){
+
+
+
+    let accusePersonNumber = getRandomInt(6) - 1;
+    let accuseWeaponNumber = getRandomInt(6) + 5;
+    let accuseRoomNumber = getRandomInt(9) + 11;
+    //give 3 to holder of each kind 
+    accuseContainer.person = deckOne[accusePersonNumber];
+    accuseContainer.weapon = deckOne[accuseWeaponNumber];
+    accuseContainer.room = deckOne[accuseRoomNumber];
+    console.log(accuseContainer);
+    //truth set
+    //IT DELETS INDEX 0, 1, and 2!!!!!!!!
+    deckTwo.splice(accuseRoomNumber.value, 1);
+    deckTwo.splice(accuseWeaponNumber.value, 1);
+    deckTwo.splice(accusePersonNumber.value, 1);
+    
+    console.log("accuse Container = " , accuseContainer);
+    for(var i = 0; i < deckTwo.length; i++){
+        console.log("deckTwo = ", deckTwo[i]);
+    }
+
+    // for(deckTwo.index < 18){
+        
+
+    // }
+
+
+
+    deckThree = [];
+    deckPlayerA = [];
+    deckPlayerB = [];
+    deckPlayerC = [];
+    deckPlayerD = [];
+    deckPlayerE = [];
+    deckPlayerF = [];
+
+
+
+
+
+
+
+
+    //add remaining cards to array in random order
+
+
+    // for (){}
+
+
+    // playerAArray
+
+
+
+    // need 6 arrays; each person gets 1 for everything they know
+    // when asked, they attempt to show cards indexed 0, 1, and 2
+    // these are the original 3 which they own
+    
+    //each person has a deck of all the cards they know. 
+    //they start with 3 cards. 
+    //when asked to show a card, they can show index 0, 1, or 2
+    //say they know 12, 18, 5, and 4
+    //bobby suspects 4, 6, 18
+    //bobby askes them "is playerBArray 0 = 4, 6, or 18?"
+    //if no, "is playerBArray 1 = 4, 6, or 18?" & "is playerBArray 2 = 4, 6, or 18?"
+    //they cannot ask about playerBArray 3 because player B does not OWN card index 3
+    //then, questioning switches to the next person
+
+}
+
+
+
+// list of all items can be static'
+// who has hand must be... objects?
+
+
+// list of all possible cards in an array, numbered 0-20
+
+// choose random # from 0-5, 6-14, 15-20 ==> this is truth
+// go by character --> choose random 18/player# cards (default 4)
+// each card: delete from "deck" array and add player-name to card-object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function getRandomInt(max) {
@@ -289,64 +394,6 @@ function hideWelcome(){
 
 
 
-function deal(){
-
-    //give 3 to holder of each kind 
-    accuseContainer.person = deckOne[getRandomInt(6) - 1];
-    accuseContainer.weapon = deckOne[getRandomInt(6) + 5];
-    accuseContainer.room = deckOne[getRandomInt(9) + 11];
-    console.log(accuseContainer);
-    //truth set
-
-
-
-
-    //add remaining cards to array in random order
-
-
-    // for (){}
-
-
-    // playerAArray
-
-
-
-    // need 6 arrays; each person gets 1 for everything they know
-    // when asked, they attempt to show cards indexed 0, 1, and 2
-    // these are the original 3 which they own
-    
-    //each person has a deck of all the cards they know. 
-    //they start with 3 cards. 
-    //when asked to show a card, they can show index 0, 1, or 2
-    //say they know 12, 18, 5, and 4
-    //bobby suspects 4, 6, 18
-    //bobby askes them "is playerBArray 0 = 4, 6, or 18?"
-    //if no, "is playerBArray 1 = 4, 6, or 18?" & "is playerBArray 2 = 4, 6, or 18?"
-    //they cannot ask about playerBArray 3 because player B does not OWN card index 3
-    //then, questioning switches to the next person
-
-}
-
-
-
-// list of all items can be static'
-// who has hand must be... objects?
-
-
-// list of all possible cards in an array, numbered 0-20
-
-// choose random # from 0-5, 6-14, 15-20 ==> this is truth
-// go by character --> choose random 18/player# cards (default 4)
-// each card: delete from "deck" array and add player-name to card-object
-
-
-
-
-
-//necessary arrays:
-//origin
-//deck, for dealing -- only used to deal; populated from origin every time
-//
 
 
 
