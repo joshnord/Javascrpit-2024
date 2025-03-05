@@ -202,7 +202,6 @@ var deckPlayerF = [];
 function deal(){
 
 
-
     let accusePersonNumber = getRandomInt(6) - 1;
     let accuseWeaponNumber = getRandomInt(6) + 5;
     let accuseRoomNumber = getRandomInt(9) + 11;
