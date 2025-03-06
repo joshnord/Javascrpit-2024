@@ -166,7 +166,7 @@ var kitchen = {
 
 
 
-
+//kinda weird this is just out in the open
 //source of cards
 var deckOne = [];
 
@@ -180,17 +180,10 @@ var deckTwo = deckOne;
 for(var i = 0; i < deckOne.length; i++){
     console.log("deckOne = ", deckOne[i]);
 }
-for(var i = 0; i < deckTwo.length; i++){
-    console.log("deckTwo = ", deckTwo[i]);
-}
+
+
 
 var deckThree = [];
-//if pushed from deck1 to deck2 = accuse, cancel
-//deck2 has 18
-//choose random 0-17 from deck2 to push to deck3; delete that one from deck2
-//choose random 0-16 from deck2...
-//0-2 = playerA
-//3-5 = playerB
 var deckPlayerA = [];
 var deckPlayerB = [];
 var deckPlayerC = [];
@@ -198,49 +191,49 @@ var deckPlayerD = [];
 var deckPlayerE = [];
 var deckPlayerF = [];
 
-
 function deal(){
 
 
-    let accusePersonNumber = getRandomInt(6) - 1;
-    let accuseWeaponNumber = getRandomInt(6) + 5;
-    let accuseRoomNumber = getRandomInt(9) + 11;
+    var accusePersonNumber = getRandomInt(6) - 1;
+    var accuseWeaponNumber = getRandomInt(6) + 5;
+    var accuseRoomNumber = getRandomInt(9) + 11;
     //give 3 to holder of each kind 
     accuseContainer.person = deckOne[accusePersonNumber];
     accuseContainer.weapon = deckOne[accuseWeaponNumber];
     accuseContainer.room = deckOne[accuseRoomNumber];
     console.log(accuseContainer);
-    //truth set
-    //IT DELETS INDEX 0, 1, and 2!!!!!!!!
-    deckTwo.splice(accuseRoomNumber.value, 1);
-    deckTwo.splice(accuseWeaponNumber.value, 1);
-    deckTwo.splice(accusePersonNumber.value, 1);
     
-    console.log("accuse Container = " , accuseContainer);
-    for(var i = 0; i < deckTwo.length; i++){
-        console.log("deckTwo = ", deckTwo[i]);
+    deckTwo.splice(accuseRoomNumber, 1);
+    deckTwo.splice(accuseWeaponNumber, 1);
+    deckTwo.splice(accusePersonNumber, 1);
+    console.log("deckTwo = ", deckTwo);
+    //accused chosen and removed
+
+
+    for(let q = deckTwo.length; q > 0; q--){
+        var george = getRandomInt(q) - 1;
+        deckThree.push(deckTwo[george]);
+        deckTwo.splice(george, 1);
     }
-
-    // for(deckTwo.index < 18){
-        
-
+    console.log("deckThree = ", deckThree);
+    // for(var i = 0; i < deckThree.length; i++){
+    //     console.log("deckThree = ", deckThree[i]);
     // }
 
 
-
-    deckThree = [];
-    deckPlayerA = [];
-    deckPlayerB = [];
-    deckPlayerC = [];
-    deckPlayerD = [];
-    deckPlayerE = [];
-    deckPlayerF = [];
-
-
-
-
-
-
+    deckPlayerA = [deckThree[0], deckThree[1], deckThree[2]];
+    deckPlayerB = [deckThree[3], deckThree[4], deckThree[5]];
+    deckPlayerC = [deckThree[6], deckThree[7], deckThree[8]];
+    deckPlayerD = [deckThree[9], deckThree[10], deckThree[11]];
+    deckPlayerE = [deckThree[12], deckThree[13], deckThree[14]];
+    deckPlayerF = [deckThree[15], deckThree[16], deckThree[17]];
+    console.log("accuseContainer = " , accuseContainer);
+    console.log( "deckPlayerA = " , deckPlayerA);
+    console.log( "deckPlayerB = " , deckPlayerB);
+    console.log( "deckPlayerC = " , deckPlayerC);
+    console.log( "deckPlayerD = " , deckPlayerD);
+    console.log( "deckPlayerE = " , deckPlayerE);
+    console.log( "deckPlayerF = " , deckPlayerF);
 
 
     //add remaining cards to array in random order
