@@ -1,7 +1,8 @@
 //array for grabbing cards by #
+//array for accuse
 //array for deleting cards from to deal -- grab from cards by #
-//array from dealing -- 1-3 is accuse, 4-6 is player A...
-//arrays for what each player knows
+//array from dealing -- 0-2 is playerA, 3-5 is playerB...
+//arrays for what each player owns + knows
 
 
 
@@ -191,12 +192,19 @@ var deckPlayerD = [];
 var deckPlayerE = [];
 var deckPlayerF = [];
 
+
+
+var accusePersonNumber = "";
+var accuseWeaponNumber = "";
+var accuseRoomNumber = "";
+
+
 function deal(){
 
 
-    var accusePersonNumber = getRandomInt(6) - 1;
-    var accuseWeaponNumber = getRandomInt(6) + 5;
-    var accuseRoomNumber = getRandomInt(9) + 11;
+    accusePersonNumber = getRandomInt(6) - 1;
+    accuseWeaponNumber = getRandomInt(6) + 5;
+    accuseRoomNumber = getRandomInt(9) + 11;
     //give 3 to holder of each kind 
     accuseContainer.person = deckOne[accusePersonNumber];
     accuseContainer.weapon = deckOne[accuseWeaponNumber];
@@ -631,9 +639,10 @@ function increaseTurnCount(){
 
 
 function endMove(){
-            personSuspectSelect.classList.remove("disabled");
-            roomSuspectSelect.classList.remove("disabled");
-            weaponSuspectSelect.classList.remove("disabled");
+            // personSuspectSelect.classList.remove("disabled");
+            // roomSuspectSelect.classList.remove("disabled");
+            // weaponSuspectSelect.classList.remove("disabled");
+            blockSubSuspect.classList.remove("disabled");
             moveHide();
             increaseTurnCount();
 }
@@ -641,16 +650,25 @@ function endMove(){
 
 
 
-// if (){
 
 
-// }
+// var accuse = document.querySelector("#accuse");
+// console.log(accuse.checked);
+// blockSubSuspect.classList.remove("disabled"); 
+// -- necessary if want to accuse when not your turn
 
+var personSuspect = "";
+var roomSuspect = "";
+var weaponSuspect = "";
 
 function questionA(){
     let accuse = document.querySelector("#accuse");
     console.log(accuse.checked);
     
+    personSuspect = document.querySelector("#personSuspectSelect").value;
+    roomSuspect = document.querySelector("#roomSuspectSelect").value;
+    weaponSuspect = document.querySelector("#weaponSuspectSelect").value;
+
     if (accuse.checked != true){
         if (playerLocationA != "Hallway"){
         playerASuspect();
@@ -666,18 +684,72 @@ function questionA(){
     }
 }
 function playerASuspect(){
-    let personSuspect = document.querySelector("#personSuspectSelect").value;
-    let roomSuspect = document.querySelector("#roomSuspectSelect").value;
-    let weaponSuspect = document.querySelector("#weaponSuspectSelect").value;
+
     newInfo.innerText += ("\n\n" + playerA + " suspects " + personSuspect + " in the " + roomSuspect + " with the " + weaponSuspect);
     disableSuspectSelect();
+    findPersonX();
+
+
+    // personSuspect
+    // roomSuspect
+    // weaponSuspect
+    // deckThree
+    // // just use deck three; 
+    // // if t = 12, write that player x has nothing
+    // // if t = 9, write that player x + 1 has nothing
+    // deckPlayerA
+    // deckPlayerB
+    // deckPlayerC
+    // deckPlayerD
+    // deckPlayerE
+    // deckPlayerF
+
+
+
+    // var t = 15
+    // while (t > 0, t-- 
+    //     && deckThree[t] != personSuspect 
+    //     && deckThree[t] != roomSuspect 
+    //     && deckThree[t] != weaponSuspect){
+        
+    // }
 
 
 }
 function accusePlz(){
-    newInfo.innerText= "you accused. u r sad now :(";
+
+    console.log(personSuspect);
+    console.log(accuseContainer.person.cardName);
+    console.log(roomSuspect);
+    console.log(accuseContainer.room.cardName);
+    console.log(weaponSuspect);
+    console.log(accuseContainer.weapon.cardName);
+
+    if (personSuspect == accuseContainer.person.cardName && 
+        roomSuspect == accuseContainer.room.cardName && 
+        weaponSuspect == accuseContainer.weapon.cardName){
+            alert ("you win!");
+    }
+    else {
+        newInfo.innerText= "you accused. u r sad now :(";
+            alert ("you lose :(");
+    }
+ 
 
 }
+
+var playerX = "";
+
+function findPersonX(){
+    var playerXFinder = "";
+    playerXFinder = turnCount % 6;
+    console.log ("playerXFinder = " + playerXFinder);
+    playerX = playerChoiceArray[playerXFinder];
+    console.log ("playerX = " + playerX);
+}
+
+
+
 
 
 
@@ -722,9 +794,11 @@ function moveShow(){
     }
 
 function disableSuspectSelect(){
-            personSuspectSelect.classList.add("disabled");
-            roomSuspectSelect.classList.add("disabled");
-            weaponSuspectSelect.classList.add("disabled");
+            // personSuspectSelect.classList.add("disabled");
+            // roomSuspectSelect.classList.add("disabled");
+            // weaponSuspectSelect.classList.add("disabled");
+            blockSubSuspect.classList.add("disabled");
+            // console.log("disableSuspectSelect");
 }
 function beginTurn(){
             
@@ -745,7 +819,8 @@ var cardName, cardOwner
 
 
 window.onload = function createArrays(){
-    arrayPeople = ["Mrs. Peacock",
+    arrayPeople = [
+    "Mrs. Peacock",
     "Pr. Plum",
     "Col. Mustard",
     "Mrs. White",
