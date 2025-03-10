@@ -1,0 +1,615 @@
+
+
+/* ALL BUTTONS */
+
+
+
+
+/* add and remove class for buttons */
+.disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+    }
+.notAllowed{
+
+    pointer-events: none;
+    }
+   
+   
+    .button{
+    background-color: white;
+    padding: 3px;
+    border: 1px solid black;
+    }
+    .button:hover{
+    background-color: yellow;
+    cursor: pointer;
+    }
+    .button1{
+    background-color: rgb(228, 228, 228);
+    padding: 3px;
+    border: 1px solid black;
+    }
+    .button1:hover{
+    background-color: rgb(153, 153, 153);
+    cursor: pointer;
+    }
+   
+   
+    .button3{
+    position: fixed;
+    top: 40vh;
+    bottom: 20vh;
+    left: calc(62vw + 5px);
+    width: 200px;
+    background-color: white;
+    text-align: center;
+    }
+    .button4{
+    display: block;
+    background-color: white;
+    padding: 6px;
+    border: 1px solid black;
+    margin: 10px;
+    font-size: 2em;
+    }
+    .button4:hover{
+    background-color: yellow;
+    cursor: pointer;
+    }
+    .buttonEndTurn{
+    position: fixed;
+    top: 91vh;
+    bottom: 5vh;
+    left: calc(62vw + 55px);
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    }
+    .buttonEndTurn:hover{
+    background-color: yellow;
+    cursor: pointer;
+    }
+    .buttonNextTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: calc(62vw + 55px);
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    }
+    .buttonNextTurn:hover{
+    background-color: yellow;
+    cursor: pointer;
+    }
+    .buttonStay{
+    position: fixed;
+    top: 21.8vh;
+    bottom: 74.8vh;
+    left: calc(62vw + 55px);
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    }
+    .buttonStay:hover{
+    background-color: yellow;
+    cursor: pointer;
+    }
+    .button5{
+    background-color: white;
+    padding: 3px;
+    border: 1px solid black;
+    }
+    .button5:hover{
+    background-color: yellow;
+    cursor: pointer;
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    /* welcome screen */
+   
+   
+    .hidden{
+    display: none;
+    }
+   
+   
+    #welcomeScreen{
+    background-color: #12a22a;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+   
+   
+    left: 0px;
+    width: 100vw;
+    z-index: 10;
+    }
+   
+   
+    #characterChoose{
+    background-color: #ffffff;
+    position: fixed;
+    top: 10vh;
+    height: 700px;
+   
+   
+    left: 10px;
+    width: 200px;
+    z-index: 11;
+   
+   
+    }
+   
+   
+    h3{
+    padding: 10px;
+    font-size: 2em;
+    }
+   
+   
+    #clueTextWelcome{
+    transform: rotate(40deg);
+    font-size: 28em;
+    z-index: 11;
+    color: white;
+    position: absolute;
+    top: 15vh;
+    left: 20vw;
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    #blockOne{
+    background-color: #12a22a;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+   
+   
+    left: 0px;
+    width: 60vw;
+    /* overflow-y: scroll; */
+   
+   
+   
+   
+    }
+   
+   
+    #blockTwo{
+    background-color: #12a22a;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+   
+   
+    right: 0px;
+    width: 40vw;
+    /* overflow-y: scroll; */
+   
+   
+   
+   
+    }
+   
+   
+   
+   
+    #blockAccuse{
+    background-color: white;
+    position: fixed;
+    top: 45vh;
+    bottom: 80vh;
+    width: 20vw;
+   
+   
+   
+   
+    }
+   
+   
+   
+   
+    img{
+    width: inherit;
+    padding-left: .5vw;
+    padding-right: .5vw;
+    /* max-height: 40vh; */
+    }
+    .imgdie{
+    width: 190px;
+    }
+    .imgleft{
+    width: 20vw;
+    }
+   
+   
+    #roomSuspectSelect{
+    font-size: 0.8em;
+    width: 75%;
+    height: 18px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 6px;
+    font-family: sans-serif;
+    }
+    #personSuspectSelect{
+    font-size: 2em;
+    width: 80%;
+    height: 30px;
+    }
+    #weaponSuspectSelect{
+    font-size: 2em;
+    width: 80%;
+    height: 30px;
+    }
+   
+   
+   
+   
+    #accuseCheck{
+    width: 15vw;
+    background-color: white;
+    }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    #blockInfo{
+    background-color: white;
+    position: fixed;
+    top: .5vh;
+    bottom: 10vh;
+   
+   
+    left: 21vw;
+    width: 39vw;
+   
+   
+    }
+   
+   
+    #newInfo{
+   
+   
+    position: fixed;
+    top: 10vh;
+    bottom: 19.5vh;
+   
+   
+    left: 25vw;
+    width: 20vw;
+    overflow-y: scroll;
+    border: 2px solid white;
+   
+   
+    }
+   
+   
+    #itemList{
+    position: fixed;
+    top: 1.5vh;
+    bottom: 11vh;
+   
+   
+    left: 49vw;
+    width: 10vw;
+    overflow-y: scroll;
+    border: 2px solid black;
+   
+   
+   
+   
+    }
+   
+   
+    #blockTurnOrder{
+    background-color: white;
+    position: fixed;
+    top: 92vh;
+    bottom: 2vh;
+   
+   
+    left: 5vw;
+    width: 50vw;
+    overflow-y: scroll;
+    border: 2px solid black;
+   
+   
+   
+   
+   
+   
+    }
+   
+   
+    #PeacockTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: 7vw;
+    width: 6vw;
+    font-size: 1.3em;
+    text-align: center;
+    color: grey;
+    border: 2px solid black;
+    background-color: #222a9975;
+    }
+    #PlumTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: 15vw;
+    width: 6vw;
+    font-size: 1.3em;
+    text-align: center;
+    color: grey;
+    border: 2px solid black;
+    background-color: #6d229975;
+    }
+    #MustardTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: 23vw;
+    width: 6vw;
+    font-size: 1.3em;
+    text-align: center;
+    color: grey;
+    border: 2px solid black;
+    background-color: #997f2275;
+    }
+    #WhiteTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: 31vw;
+    width: 6vw;
+    font-size: 1.3em;
+    text-align: center;
+    color: grey;
+    border: 2px solid black;
+    background-color: #bdfffc75;
+    }
+    #GreenTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: 39vw;
+    width: 6vw;
+    font-size: 1.3em;
+    text-align: center;
+    color: grey;
+    border: 2px solid black;
+    background-color: #2e992275;
+    }
+    #ScarletTurn{
+    position: fixed;
+    top: 93vh;
+    bottom: 3vh;
+    left: 47vw;
+    width: 6vw;
+    font-size: 1.3em;
+    text-align: center;
+    color: grey;
+    border: 2px solid black;
+    background-color: #99222275;
+    }
+    #ActiveTurn{
+    /* add for current turn */
+    opacity: 0;
+    color: black;
+    text-decoration: bold;
+    }
+   
+   
+    #roomTwo{
+    font-size: 1.8em;
+    width: 200px;
+    /*
+    width: 17.5vw; */
+    }
+   
+   
+   
+   
+   
+   
+    #blockHighScore{
+    position: fixed;
+    top: .5vh;
+    bottom: 95vh;
+    left: 62vw;
+    width: 35.25vw;
+    padding: .75vh;
+    background-color: white;
+   
+   
+    }
+   
+   
+    #blockScore{
+    position: fixed;
+    top: .5vh;
+    left: calc(62vw + 200px);
+    padding: .75vh;
+    }
+   
+   
+   
+   
+    #blockMove{
+    position: fixed;
+    top: 8vh;
+    bottom: 0vh;
+    left: 62vw;
+    /* width: 36vw; */
+    width: 210px;
+    border: 2px solid black;
+   
+   
+    }
+   
+   
+   
+   
+    #blockTurnNumber{
+    position: fixed;
+    top: 8vh;
+    bottom: 85vh;
+    left: 62vw;
+    /* width: 15vw; */
+    width: 200px;
+    text-align: center;
+    background-color: white;
+   
+   
+    }
+   
+   
+   
+   
+    #blockMoveSelect{
+    position: fixed;
+    top: 17vh;
+   
+   
+    }
+   
+   
+   
+   
+    #blockMoveRules{
+    position: fixed;
+    top: 26vh;
+    text-align: center;
+    padding: 2px;
+    background-color: white;
+    font-size: .9em;
+   
+   
+    }
+   
+   
+   
+   
+   
+   
+    #blockMoveDisplay{
+    position: fixed;
+    top: 80vh;
+    bottom: 14vh;
+    left: calc(62vw + 5px);
+    width: 200px;
+    background-color: white;
+    text-align: center;
+    }
+   
+   
+   
+   
+   
+   
+    #blockNotes{
+    position: fixed;
+    top: 8vh;
+    bottom: .5vh;
+    right: 1vw;
+    width: calc(35vw - 200px);
+    text-align: center;
+    background-color: white;
+    /* border: 2px solid black; */
+   
+   
+   
+   
+    }
+   
+   
+    #notes{
+   
+   
+    width: calc(34vw - 200px);
+    text-align: center;
+    background-color: white;
+    overflow-y: scroll;
+    border: 2px solid black;
+   
+   
+   
+   
+    }
+   
+   
+
