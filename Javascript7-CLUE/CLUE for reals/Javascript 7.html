@@ -9,32 +9,6 @@
 </head>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
 
 
@@ -53,44 +27,26 @@
 </div>
 
 
-
-
 <div id="clueTextWelcome">CLUE</div>
-
-
-
-
 </div>
+
+
+
+
 
 
 
 
 <div id="blockOne">
 <!-- save game, map, accuse, suspect input -- info gleaned, items list -- turn tracker -->
-
-
-
-
-
-
-
-
-
-
-
-
 <div id="blockSuspect">
 <span class="button" onclick="save()">Save Game</span>
-
-
 
 
 <div class="imgleft">
 <img src="../../images/map.jpeg"
 alt="game map">
 </div>
-
-
 
 
 <div id="blockAccuse">
@@ -125,7 +81,7 @@ alt="game map">
 </select>
 </div> -->
 <div name="room" id="roomSuspectSelect">
- Room
+Room
 </div>
 <div>
 <select name="weapon" id="weaponSuspectSelect">
@@ -156,14 +112,11 @@ alt="game map">
 <span class="button" onclick="movePlayerN('D')">movePlayerN('D')</span>
 <span class="button" onclick="movePlayerN('E')">movePlayerN('E')</span>
 <span class="button" onclick="movePlayerN('F')">movePlayerN('F')</span>
-
+<span class="button" onclick="playerSuspect(playerB)">playerSuspect(playerB)</span>
 
 
 </div>
 </div>
-
-
-
 
 
 
@@ -174,18 +127,12 @@ alt="game map">
 <div id="blockInfo">
 
 
-
 <div id="newInfo">
-
 <!-- i dont need anything here -->
-
 </div>
 
 
-
 <div id="itemList">
-
-
 
 
 <div id="personMenu">
@@ -193,13 +140,9 @@ alt="game map">
 </div>
 
 
-
-
 <div id="roomMenu">
 <span class="button1" onclick="roomExpand()">Rooms</span>
 </div>
-
-
 
 
 <div id="weaponMenu">
@@ -213,43 +156,11 @@ alt="game map">
 e
 </div> --> <!--proof that scroll works-->
 <!-- these need names + dropdown to pick person -- objects will turn color of name but stay same txt-->
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div id="blockTurnOrder">
-
-
 
 
 <div id="PeacockTurn">Peacock</div>
@@ -260,14 +171,16 @@ e
 <div id="ScarletTurn">Scarlet</div>
 
 
-
-
+</div>
 </div>
 
 
 
 
-</div>
+
+
+
+
 
 
 
@@ -276,23 +189,9 @@ e
 <!-- High score -- where go choice, movement rules, die, end turn -- notes -->
 
 
-
-
-
-
-
-
 <div id="blockHighScore">
 <!-- at succesfful accuse, update this: if lower, replace; if higher, nothing -->
 High Score:
-
-
-
-
-
-
-
-
 <div id="blockScore">
 Score:
 </div>
@@ -301,12 +200,10 @@ Score:
 
 
 
-
-
-
-
 <div id="blockMove">
 <div id="blockTurnNumber">Turn Number:
+
+
 
 
 
@@ -331,22 +228,11 @@ Score:
 </div>
 </div>
 <div id = "blockMoveRules">
-<!-- random # generator
-if ( (# + 1) % 4 == 0)
-roll = 1
-if ( (# + 2) % 4 == 0)
-roll = 2
-if ( (# + 3) % 4 == 0)
-roll = 3
-if ( (# + 4) % 4 == 0)
-roll = 4
--->
 <div> Failure to move: 25% chance 1</div>
 <div> Room to Hallway: 50% chance 2-3</div>
 <div> Hallway to Room: 75% chance 2-4</div>
 <div> Room to Room: 25% chance 4</div>
 </div>
-
 
 
 
@@ -360,11 +246,7 @@ alt = "4 sided die"/>
 </span>
 
 
-
-
 </div>
-
-
 
 
 
@@ -378,19 +260,9 @@ alt = "4 sided die"/>
 <!-- Notes: -->
 <!-- <input type="text" id="notes" placeholder=""> -->
 <label for="notes">Notes:</label>
-
-
-
-
 <textarea id="notes" name="notes" rows="58" cols="50"></textarea>
 </div>
-
-
-
-
-
 </div>
-
 
 
 
@@ -398,9 +270,6 @@ alt = "4 sided die"/>
 
 
 
+
+
 </html>
-
-
-
-
-
