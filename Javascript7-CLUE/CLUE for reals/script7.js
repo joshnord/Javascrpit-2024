@@ -606,6 +606,7 @@ weaponSuspect = document.querySelector("#weaponSuspectSelect").value;
 var deckQuestion = [];
 var benjamin = "";
 var chooseRandomiser = 5;
+var g = "";
 
 
 function playerSuspect(playerWhoseTurn){
@@ -674,7 +675,7 @@ for(var r = 0; r <= 5; r++){
         console.log("pre-for loop bobert = " + bobert);
         for(var y = 0; y <= 2; y++){
         console.log("bobert = " + bobert);
-        let g = (chooseRandomiser + y) % 3;
+         g = (chooseRandomiser + y) % 3;
         console.log(deckQuestion[g].cardName + " (deckQuestion[y].cardName)");
         console.log("g = " + g + "; y = " + y);
             if (deckQuestion[g].cardName == personSuspect
@@ -698,8 +699,10 @@ for(var r = 0; r <= 5; r++){
                             console.log("Deck A Before: ", deckPlayerA);
                             console.log("pushed");
                             deckPlayerA.push[deckQuestion[g]];
-                            
-                            console.log("Deck Question", deckQuestion[g]);
+                            //deckPlayerA = [deckThree[0], deckThree[1], deckThree[2]];
+                            console.log("Deck Question", deckQuestion);
+                            console.log("g", g);
+                            console.log("Deck Question g", deckQuestion[g]);
                             console.log("Deck A AFter", deckPlayerA);
                         }
                         else if (playerWhoseTurn == playerB){
