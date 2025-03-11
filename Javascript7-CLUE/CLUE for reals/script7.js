@@ -351,7 +351,7 @@ var locationPlayerE = "Hallway";
 var playerLocationE = "Hallway";
 var locationPlayerF = "Hallway";
 var playerLocationF = "Hallway";
-
+var moveValue = "";
 
 
 
@@ -362,7 +362,7 @@ newInfo.innerText = "";
 
 
 
-var moveValue = getRandomInt(4);
+ moveValue = getRandomInt(4);
 
 
 var roomChoiceB = (getRandomInt(9) + 11);
@@ -692,11 +692,18 @@ for(var r = 0; r <= 5; r++){
                     else {
                         newInfo.innerText += "\n\n" + benjamin + " shows " + playerWhoseTurn + " a card";
                     }
+                    console.log("will push");
                         if (playerWhoseTurn == playerA){
-                            deckPlayerA.push[deckQuestion[g].cardName];
+
+                            console.log("Deck A Before: ", deckPlayerA);
+                            console.log("pushed");
+                            deckPlayerA.push[deckQuestion[g]];
+                            
+                            console.log("Deck Question", deckQuestion[g]);
+                            console.log("Deck A AFter", deckPlayerA);
                         }
                         else if (playerWhoseTurn == playerB){
-                            deckPlayerB.push[deckQuestion[g].cardName];
+                            deckPlayerB.push[deckQuestion[g]];
                         }
                         else if (playerWhoseTurn == playerC){
                             deckPlayerC.push[deckQuestion[g].cardName];
