@@ -1,0 +1,30 @@
+body{
+    background-color: whitesmoke;
+    border: 0px;
+    margin: 0px;
+    min-height: 600px;
+
+}
+header{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    background-color: navy; 
+    font-family: papyrus;
+
+}
+main{
+    background-color: dodgerblue;
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 600px;
+
+}
+main ul{
+    background-color: white;
+    margin: 10px;
+    min-height: 100px;
+    min-width: 100px;
+    flex: 1;
+}
+
