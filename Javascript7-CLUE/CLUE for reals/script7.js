@@ -362,9 +362,6 @@ newInfo.innerText = "";
 
 
 
-
-
-
 var moveValue = getRandomInt(4);
 
 
@@ -415,9 +412,6 @@ roomChoice = roomChoiceF;
 if (roomChoice != "" && roomChoice != playerLocation){
 if (moveValue == 1){
 locationPlayer = locationPlayer;
-    if (bob == "A"){
-        newInfo.innerText += "\n\n" + "You rolled a 1";
-    }
 }
 else if ((moveValue == 2 || moveValue == 3) && locationPlayer == "Hallway"){
 locationPlayer = "Room";
@@ -496,6 +490,9 @@ playerLocationA = playerLocation;
 // var realTurnNumber = document.querySelector("#realTurnNumber");
 // realTurnNumber.innerText = parseInt(realTurnNumber.innerText) + 1;
 roomSuspectSelect.innerText = playerLocationA;
+        if (moveValue == 1){
+        newInfo.innerText += "You rolled a 1" + "\n\n";
+        }
     if (playerLocationA == "Hallway"){
     newInfo.innerText += playerA + " is in the " + "Hallway";
     stayChoice.classList.add("disabled");
@@ -572,7 +569,7 @@ function endMove(){
 // personSuspectSelect.classList.remove("disabled");
 // roomSuspectSelect.classList.remove("disabled");
 // weaponSuspectSelect.classList.remove("disabled");
-newInfo.innerText = playerA + " is in the " + playerLocationA;
+newInfo.innerText += playerA + " is in the " + playerLocationA;
 blockSubSuspect.classList.remove("disabled");
 moveHide();
 increaseTurnCount();
