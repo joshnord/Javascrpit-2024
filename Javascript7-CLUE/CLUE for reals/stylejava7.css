@@ -103,6 +103,168 @@ border: 1px solid black;
 background-color: yellow;
 cursor: pointer;
 }
+
+
+
+
+
+
+.isPeacock{
+    background-color: rgb(24, 24, 90);
+}
+.isPlum{
+    background-color: rgb(91, 25, 91);
+}
+.isMustard{
+    background-color: rgb(167, 141, 29);
+}
+.isWhite{
+    background-color: rgb(161, 161, 161);
+}
+.isGreen{
+    background-color: rgb(28, 141, 26);
+}
+.isScarlet{
+    background-color: rgb(183, 0, 0);
+}
+
+.opacityCheck{
+    opacity: 60%;
+    color:rgb(166, 166, 166);
+}
+
+
+.buttonHand0{
+    padding: 3px;
+    border: 2px solid black;
+    position: fixed;
+    top: 73vh;
+    bottom: 20vh;
+    left: 25vw;
+    width: 5vw;
+    color:white;
+}
+.buttonHand0:hover{
+    background-color: yellow;
+    cursor: pointer; 
+}
+.buttonHand1{
+    padding: 3px;
+    border: 2px solid black;
+    position: fixed;
+    top: 73vh;
+    bottom: 20vh;
+    left: 32.5vw;
+    width: 5vw;
+    color:white;
+}
+.buttonHand1:hover{
+    background-color: yellow;
+    cursor: pointer; 
+}
+.buttonHand2{
+    padding: 3px;
+    border: 2px solid black;
+    position: fixed;
+    top: 73vh;
+    bottom: 20vh;
+    left: 40vw;
+    width: 5vw;
+    color:white;
+}
+.buttonHand2:hover{
+    background-color: yellow;
+    cursor: pointer; 
+}
+
+
+#PeacockTurn{
+position: fixed;
+top: 93vh;
+bottom: 3vh;
+left: 7vw;
+width: 6vw;
+font-size: 1.3em;
+text-align: center;
+color: black;
+border: 2px solid black;
+}
+#PlumTurn{
+position: fixed;
+top: 93vh;
+bottom: 3vh;
+left: 15vw;
+width: 6vw;
+font-size: 1.3em;
+text-align: center;
+color: black;
+border: 2px solid black;
+}
+#MustardTurn{
+position: fixed;
+top: 93vh;
+bottom: 3vh;
+left: 23vw;
+width: 6vw;
+font-size: 1.3em;
+text-align: center;
+color: black;
+border: 2px solid black;
+}
+#WhiteTurn{
+position: fixed;
+top: 93vh;
+bottom: 3vh;
+left: 31vw;
+width: 6vw;
+font-size: 1.3em;
+text-align: center;
+color: black;
+border: 2px solid black;
+}
+#GreenTurn{
+position: fixed;
+top: 93vh;
+bottom: 3vh;
+left: 39vw;
+width: 6vw;
+font-size: 1.3em;
+text-align: center;
+color: black;
+border: 2px solid black;
+}
+#ScarletTurn{
+position: fixed;
+top: 93vh;
+bottom: 3vh;
+left: 47vw;
+width: 6vw;
+font-size: 1.3em;
+text-align: center;
+color: black;
+border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* welcome screen */
 .hidden{
 display: none;
@@ -209,7 +371,7 @@ width: 39vw;
 #newInfo{
 position: fixed;
 top: 10vh;
-bottom: 19.5vh;
+bottom: 27.5vh;
 left: 25vw;
 width: 20vw;
 overflow-y: scroll;
@@ -233,88 +395,6 @@ left: 5vw;
 width: 50vw;
 overflow-y: scroll;
 border: 2px solid black;
-}
-.currentIndividual{
-    opacity: 100;
-    color: black;
-}
-#PeacockTurn{
-position: fixed;
-top: 93vh;
-bottom: 3vh;
-left: 7vw;
-width: 6vw;
-font-size: 1.3em;
-text-align: center;
-color: grey;
-border: 2px solid black;
-background-color: #222a9975;
-}
-#PlumTurn{
-position: fixed;
-top: 93vh;
-bottom: 3vh;
-left: 15vw;
-width: 6vw;
-font-size: 1.3em;
-text-align: center;
-color: grey;
-border: 2px solid black;
-background-color: #6d229975;
-}
-#MustardTurn{
-position: fixed;
-top: 93vh;
-bottom: 3vh;
-left: 23vw;
-width: 6vw;
-font-size: 1.3em;
-text-align: center;
-color: grey;
-border: 2px solid black;
-background-color: #997f2275;
-}
-#WhiteTurn{
-position: fixed;
-top: 93vh;
-bottom: 3vh;
-left: 31vw;
-width: 6vw;
-font-size: 1.3em;
-text-align: center;
-color: grey;
-border: 2px solid black;
-background-color: #bdfffc75;
-}
-#GreenTurn{
-position: fixed;
-top: 93vh;
-bottom: 3vh;
-left: 39vw;
-width: 6vw;
-font-size: 1.3em;
-text-align: center;
-color: grey;
-border: 2px solid black;
-background-color: #2e992275;
-}
-#ScarletTurn{
-position: fixed;
-top: 93vh;
-bottom: 3vh;
-left: 47vw;
-width: 6vw;
-font-size: 1.3em;
-text-align: center;
-color: grey;
-border: 2px solid black;
-background-color: #99222275;
-}
-#ActiveTurn{
-/* add for current turn */
-opacity: 0;
-color: black;
-text-decoration: bold;
 }
 #roomTwo{
 font-size: 1.8em;

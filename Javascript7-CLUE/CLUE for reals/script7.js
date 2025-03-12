@@ -31,68 +31,73 @@ var weaponSuspect = "";
 
 
 function getRandomInt(max) {
-return Math.floor(Math.random() * max + 1);
+    return Math.floor(Math.random() * max + 1);
 }
+
+
+
+
+
    
    
 var accuseContainer = {
-person: realPerson,
-room: realRoom,
-weapon: realWeapon,
+    person: realPerson,
+    room: realRoom,
+    weapon: realWeapon,
 }
    
    
 var charOne = {
-name: "White",
-number: 21,
-location: newLocation,//hall or roomTwo.value
-cards: newHand,
-knowledge: newCharInfo
+    name: "White",
+    number: 21,
+    location: newLocation,//hall or roomTwo.value
+    cards: newHand,
+    knowledge: newCharInfo
 }
 var charTwo = {
-name: "Peacock",
-number: 22,
-location: newLocation,//hall or roomTwo.value
-cards: newHand,
-knowledge: newCharInfo
+    name: "Peacock",
+    number: 22,
+    location: newLocation,//hall or roomTwo.value
+    cards: newHand,
+    knowledge: newCharInfo
 }
 var charThree = {
-name: "Scarlet",
-number: 23,
-location: newLocation,//hall or roomTwo.value
-cards: newHand,
-knowledge: newCharInfo
+    name: "Scarlet",
+    number: 23,
+    location: newLocation,//hall or roomTwo.value
+    cards: newHand,
+    knowledge: newCharInfo
 }
 var charFour = {
-name: "Green",
-number: 24,
-location: newLocation,//hall or roomTwo.value
-cards: newHand,
-knowledge: newCharInfo
+    name: "Green",
+    number: 24,
+    location: newLocation,//hall or roomTwo.value
+    cards: newHand,
+    knowledge: newCharInfo
 }
 var charFive = {
-name: "Plum",
-number: 25,
-location: newLocation,//hall or roomTwo.value
-cards: newHand,
-knowledge: newCharInfo
+    name: "Plum",
+    number: 25,
+    location: newLocation,//hall or roomTwo.value
+    cards: newHand,
+    knowledge: newCharInfo
 }
 var charSix = {
-name: "Mustard",
-number: 26,
-location: newLocation,//hall or roomTwo.value
-cards: newHand,
-knowledge: newCharInfo
+    name: "Mustard",
+    number: 26,
+    location: newLocation,//hall or roomTwo.value
+    cards: newHand,
+    knowledge: newCharInfo
 }
 
 
 var peacock = {
-cardName: "Mrs. Peacock",
-cardNumber: 0
+    cardName: "Mrs. Peacock",
+    cardNumber: 0
 }
 var plum = {
-cardName: "Pr. Plum",
-cardNumber: 1
+    cardName: "Pr. Plum",
+    cardNumber: 1
 }
 var mustard = {
 cardName: "Col. Mustard",
@@ -210,64 +215,82 @@ var playerD = "";
 var playerE = "";
 var playerF = "";
 function chooseScarlet(){
-playerA = playerChoiceArray[0];
-playerB = playerChoiceArray[1];
-playerC = playerChoiceArray[2];
-playerD = playerChoiceArray[3];
-playerE = playerChoiceArray[4];
-playerF = playerChoiceArray[5];
-hideWelcome();
-deal();
+    playerA = playerChoiceArray[0];
+    playerB = playerChoiceArray[1];
+    playerC = playerChoiceArray[2];
+    playerD = playerChoiceArray[3];
+    playerE = playerChoiceArray[4];
+    playerF = playerChoiceArray[5];
+    handZero.classList.add("isScarlet");
+    handOne.classList.add("isScarlet");
+    handTwo.classList.add("isScarlet");
+    hideWelcome();
+    deal();
 }
 function chooseGreen(){
-playerA = playerChoiceArray[5];
-playerB = playerChoiceArray[0];
-playerC = playerChoiceArray[1];
-playerD = playerChoiceArray[2];
-playerE = playerChoiceArray[3];
-playerF = playerChoiceArray[4];
-hideWelcome();
-deal();
+    playerA = playerChoiceArray[5];
+    playerB = playerChoiceArray[0];
+    playerC = playerChoiceArray[1];
+    playerD = playerChoiceArray[2];
+    playerE = playerChoiceArray[3];
+    playerF = playerChoiceArray[4];
+    handZero.classList.add("isGreen");
+    handOne.classList.add("isGreen");
+    handTwo.classList.add("isGreen");
+    hideWelcome();
+    deal();
 }
 function chooseWhite(){
-playerA = playerChoiceArray[4];
-playerB = playerChoiceArray[5];
-playerC = playerChoiceArray[0];
-playerD = playerChoiceArray[1];
-playerE = playerChoiceArray[2];
-playerF = playerChoiceArray[3];
-hideWelcome();
-deal();
+    playerA = playerChoiceArray[4];
+    playerB = playerChoiceArray[5];
+    playerC = playerChoiceArray[0];
+    playerD = playerChoiceArray[1];
+    playerE = playerChoiceArray[2];
+    playerF = playerChoiceArray[3];
+    handZero.classList.add("isWhite");
+    handOne.classList.add("isWhite");
+    handTwo.classList.add("isWhite");
+    hideWelcome();
+    deal();
 }
 function chooseMustard(){
-playerA = playerChoiceArray[3];
-playerB = playerChoiceArray[4];
-playerC = playerChoiceArray[5];
-playerD = playerChoiceArray[0];
-playerE = playerChoiceArray[1];
-playerF = playerChoiceArray[2];
-hideWelcome();
-deal();
+    playerA = playerChoiceArray[3];
+    playerB = playerChoiceArray[4];
+    playerC = playerChoiceArray[5];
+    playerD = playerChoiceArray[0];
+    playerE = playerChoiceArray[1];
+    playerF = playerChoiceArray[2];
+    handZero.classList.add("isMustard");
+    handOne.classList.add("isMustard");
+    handTwo.classList.add("isMustard");
+    hideWelcome();
+    deal();
 }
 function choosePlum(){
-playerA = playerChoiceArray[2];
-playerB = playerChoiceArray[3];
-playerC = playerChoiceArray[4];
-playerD = playerChoiceArray[5];
-playerE = playerChoiceArray[0];
-playerF = playerChoiceArray[1];
-hideWelcome();
-deal();
+    playerA = playerChoiceArray[2];
+    playerB = playerChoiceArray[3];
+    playerC = playerChoiceArray[4];
+    playerD = playerChoiceArray[5];
+    playerE = playerChoiceArray[0];
+    playerF = playerChoiceArray[1];
+    handZero.classList.add("isPlum");
+    handOne.classList.add("isPlum");
+    handTwo.classList.add("isPlum");
+    hideWelcome();
+    deal();
 }
 function choosePeacock(){
-playerA = playerChoiceArray[1];
-playerB = playerChoiceArray[2];
-playerC = playerChoiceArray[3];
-playerD = playerChoiceArray[4];
-playerE = playerChoiceArray[5];
-playerF = playerChoiceArray[0];
-hideWelcome();
-deal();
+    playerA = playerChoiceArray[1];
+    playerB = playerChoiceArray[2];
+    playerC = playerChoiceArray[3];
+    playerD = playerChoiceArray[4];
+    playerE = playerChoiceArray[5];
+    playerF = playerChoiceArray[0];
+    handZero.classList.add("isPeacock");
+    handOne.classList.add("isPeacock");
+    handTwo.classList.add("isPeacock");
+    hideWelcome();
+    deal();
 }
 
 
@@ -278,60 +301,91 @@ var accuseRoomNumber = "";
 
 function deal(){
 
-accusePersonNumber = getRandomInt(6) - 1;
-accuseWeaponNumber = getRandomInt(6) + 5;
-accuseRoomNumber = getRandomInt(9) + 11;
-//give 3 to holder of each kind
-accuseContainer.person = deckOne[accusePersonNumber];
-accuseContainer.weapon = deckOne[accuseWeaponNumber];
-accuseContainer.room = deckOne[accuseRoomNumber];
-console.log(accuseContainer);
-deckTwo.splice(accuseRoomNumber, 1);
-deckTwo.splice(accuseWeaponNumber, 1);
-deckTwo.splice(accusePersonNumber, 1);
-console.log("deckTwo = ", deckTwo);
-//accused chosen and removed
+    accusePersonNumber = getRandomInt(6) - 1;
+    accuseWeaponNumber = getRandomInt(6) + 5;
+    accuseRoomNumber = getRandomInt(9) + 11;
+    //give 3 to holder of each kind
+    accuseContainer.person = deckOne[accusePersonNumber];
+    accuseContainer.weapon = deckOne[accuseWeaponNumber];
+    accuseContainer.room = deckOne[accuseRoomNumber];
+    console.log(accuseContainer);
+    deckTwo.splice(accuseRoomNumber, 1);
+    deckTwo.splice(accuseWeaponNumber, 1);
+    deckTwo.splice(accusePersonNumber, 1);
+    console.log("deckTwo = ", deckTwo);
+    //accused chosen and removed
 
-for(let q = deckTwo.length; q > 0; q--){
-var george = getRandomInt(q) - 1;
-deckThree.push(deckTwo[george]);
-deckTwo.splice(george, 1);
+    for(let q = deckTwo.length; q > 0; q--){
+    var george = getRandomInt(q) - 1;
+    deckThree.push(deckTwo[george]);
+    deckTwo.splice(george, 1);
+    }
+    //randomly added to deck 3
+    console.log("deckThree = ", deckThree);
+
+
+    deckPlayerA = [deckThree[0], deckThree[1], deckThree[2]];
+    deckPlayerB = [deckThree[3], deckThree[4], deckThree[5]];
+    deckPlayerC = [deckThree[6], deckThree[7], deckThree[8]];
+    deckPlayerD = [deckThree[9], deckThree[10], deckThree[11]];
+    deckPlayerE = [deckThree[12], deckThree[13], deckThree[14]];
+    deckPlayerF = [deckThree[15], deckThree[16], deckThree[17]];
+    console.log("");
+    console.log("accuseContainer = " , accuseContainer);
+    console.log( "deckPlayerA = " , deckPlayerA);
+    console.log( "deckPlayerB = " , deckPlayerB);
+    console.log( "deckPlayerC = " , deckPlayerC);
+    console.log( "deckPlayerD = " , deckPlayerD);
+    console.log( "deckPlayerE = " , deckPlayerE);
+    console.log( "deckPlayerF = " , deckPlayerF);
+    console.log("");
+    console.log("");
+    console.log("");
+    console.log("");
+
+    handZero.innerHTML = deckPlayerA[0].cardName;
+    handOne.innerHTML = deckPlayerA[1].cardName;
+    handTwo.innerHTML = deckPlayerA[2].cardName;
 }
-//randomly added to deck 3
-console.log("deckThree = ", deckThree);
-
-
-deckPlayerA = [deckThree[0], deckThree[1], deckThree[2]];
-deckPlayerB = [deckThree[3], deckThree[4], deckThree[5]];
-deckPlayerC = [deckThree[6], deckThree[7], deckThree[8]];
-deckPlayerD = [deckThree[9], deckThree[10], deckThree[11]];
-deckPlayerE = [deckThree[12], deckThree[13], deckThree[14]];
-deckPlayerF = [deckThree[15], deckThree[16], deckThree[17]];
-console.log("");
-console.log("accuseContainer = " , accuseContainer);
-console.log( "deckPlayerA = " , deckPlayerA);
-console.log( "deckPlayerB = " , deckPlayerB);
-console.log( "deckPlayerC = " , deckPlayerC);
-console.log( "deckPlayerD = " , deckPlayerD);
-console.log( "deckPlayerE = " , deckPlayerE);
-console.log( "deckPlayerF = " , deckPlayerF);
-console.log("");
-console.log("");
-console.log("");
-console.log("");
-}
-
-
-
 
 
 function hideWelcome(){
-welcomeScreen.classList.add("hidden");
-roomSuspectSelect.classList.add("notAllowed");
-console.log("playerA = " + playerA);
-disableSuspectSelect();
-stayChoice.classList.add("disabled");
+    welcomeScreen.classList.add("hidden");
+    roomSuspectSelect.classList.add("notAllowed");
+    console.log("playerA = " + playerA);
+    disableSuspectSelect();
+    stayChoice.classList.add("disabled");
+
+    PeacockTurn.classList.add("opacityCheck", "isPeacock");
+    PlumTurn.classList.add("opacityCheck", "isPlum");
+    MustardTurn.classList.add("opacityCheck", "isMustard");
+    WhiteTurn.classList.add("opacityCheck", "isWhite");
+    GreenTurn.classList.add("opacityCheck", "isGreen");
+    ScarletTurn.classList.add('opacityCheck', "isScarlet");
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
