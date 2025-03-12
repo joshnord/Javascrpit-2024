@@ -226,6 +226,7 @@ function chooseScarlet(){
     handTwo.classList.add("isScarlet");
     hideWelcome();
     deal();
+    ScarletTurn.classList.remove("opacityCheck");
 }
 function chooseGreen(){
     playerA = playerChoiceArray[5];
@@ -239,6 +240,7 @@ function chooseGreen(){
     handTwo.classList.add("isGreen");
     hideWelcome();
     deal();
+    GreenTurn.classList.remove("opacityCheck");
 }
 function chooseWhite(){
     playerA = playerChoiceArray[4];
@@ -252,6 +254,7 @@ function chooseWhite(){
     handTwo.classList.add("isWhite");
     hideWelcome();
     deal();
+    WhiteTurn.classList.remove("opacityCheck");
 }
 function chooseMustard(){
     playerA = playerChoiceArray[3];
@@ -265,6 +268,7 @@ function chooseMustard(){
     handTwo.classList.add("isMustard");
     hideWelcome();
     deal();
+    MustardTurn.classList.remove("opacityCheck");
 }
 function choosePlum(){
     playerA = playerChoiceArray[2];
@@ -278,6 +282,7 @@ function choosePlum(){
     handTwo.classList.add("isPlum");
     hideWelcome();
     deal();
+    PlumTurn.classList.remove("opacityCheck");
 }
 function choosePeacock(){
     playerA = playerChoiceArray[1];
@@ -291,6 +296,7 @@ function choosePeacock(){
     handTwo.classList.add("isPeacock");
     hideWelcome();
     deal();
+    PeacockTurn.classList.remove("opacityCheck");
 }
 
 
@@ -816,16 +822,193 @@ playerX = playerChoiceArray[playerXFinder];
 // if roomTwo is a non-default value, class disabled is turned off
 // roomTwo is reset to default at end of turn
 // and disabled until turn start
+
+
+var totalTurnCount = 1;
+
+function nextTurn(){
+    nextTurnButton.classList.add("disabled");
+    console.log("totalTurnCount =  "+ totalTurnCount);
+    if (totalTurnCount%6 == 0){
+                if (playerA == "Mrs. Peacock"){
+                    PeacockTurn.classList.remove("opacityCheck");
+                }
+                else if (playerA == "Pr. Plum"){
+                    PlumTurn.classList.remove("opacityCheck");
+                }
+                else if (playerA == "Col. Mustard"){
+                    MustardTurn.classList.remove("opacityCheck");
+                }
+                else if (playerA == "Mrs. White"){
+                    WhiteTurn.classList.remove("opacityCheck");
+                }
+                else if (playerA == "Mr. Green"){
+                    GreenTurn.classList.remove("opacityCheck");
+                }
+                else if (playerA == "Ms. Scarlet"){
+                    ScarletTurn.classList.remove("opacityCheck");
+                }
+        beginTurnA();
+    }
+    else if (totalTurnCount%6 == 1){
+        PeacockTurn.classList.add("opacityCheck");
+        PlumTurn.classList.add("opacityCheck");
+        MustardTurn.classList.add("opacityCheck");
+        WhiteTurn.classList.add("opacityCheck");
+        GreenTurn.classList.add("opacityCheck");
+        ScarletTurn.classList.add("opacityCheck");
+        if (playerB == "Mrs. Peacock"){
+            PeacockTurn.classList.remove("opacityCheck");
+        }
+        else if (playerB == "Pr. Plum"){
+            PlumTurn.classList.remove("opacityCheck");
+        }
+        else if (playerB == "Col. Mustard"){
+            MustardTurn.classList.remove("opacityCheck");
+        }
+        else if (playerB == "Mrs. White"){
+            WhiteTurn.classList.remove("opacityCheck");
+        }
+        else if (playerB == "Mr. Green"){
+            GreenTurn.classList.remove("opacityCheck");
+        }
+        else if (playerB == "Ms. Scarlet"){
+            ScarletTurn.classList.remove("opacityCheck");
+        }
+        endTurn();
+        aiChooseSuspect(playerB);
+    }
+    else if (totalTurnCount%6 == 2){
+        PeacockTurn.classList.add("opacityCheck");
+        PlumTurn.classList.add("opacityCheck");
+        MustardTurn.classList.add("opacityCheck");
+        WhiteTurn.classList.add("opacityCheck");
+        GreenTurn.classList.add("opacityCheck");
+        ScarletTurn.classList.add("opacityCheck");
+        if (playerC == "Mrs. Peacock"){
+            PeacockTurn.classList.remove("opacityCheck");
+        }
+        else if (playerC == "Pr. Plum"){
+            PlumTurn.classList.remove("opacityCheck");
+        }
+        else if (playerC == "Col. Mustard"){
+            MustardTurn.classList.remove("opacityCheck");
+        }
+        else if (playerC == "Mrs. White"){
+            WhiteTurn.classList.remove("opacityCheck");
+        }
+        else if (playerC == "Mr. Green"){
+            GreenTurn.classList.remove("opacityCheck");
+        }
+        else if (playerC == "Ms. Scarlet"){
+            ScarletTurn.classList.remove("opacityCheck");
+        }
+        aiChooseSuspect(playerC);
+    }
+    else if (totalTurnCount%6 == 3){
+        PeacockTurn.classList.add("opacityCheck");
+        PlumTurn.classList.add("opacityCheck");
+        MustardTurn.classList.add("opacityCheck");
+        WhiteTurn.classList.add("opacityCheck");
+        GreenTurn.classList.add("opacityCheck");
+        ScarletTurn.classList.add("opacityCheck");
+        if (playerD == "Mrs. Peacock"){
+            PeacockTurn.classList.remove("opacityCheck");
+        }
+        else if (playerD == "Pr. Plum"){
+            PlumTurn.classList.remove("opacityCheck");
+        }
+        else if (playerD == "Col. Mustard"){
+            MustardTurn.classList.remove("opacityCheck");
+        }
+        else if (playerD == "Mrs. White"){
+            WhiteTurn.classList.remove("opacityCheck");
+        }
+        else if (playerD == "Mr. Green"){
+            GreenTurn.classList.remove("opacityCheck");
+        }
+        else if (playerD == "Ms. Scarlet"){
+            ScarletTurn.classList.remove("opacityCheck");
+        }
+        aiChooseSuspect(playerD);
+    }
+    else if (totalTurnCount%6 == 4){
+        PeacockTurn.classList.add("opacityCheck");
+        PlumTurn.classList.add("opacityCheck");
+        MustardTurn.classList.add("opacityCheck");
+        WhiteTurn.classList.add("opacityCheck");
+        GreenTurn.classList.add("opacityCheck");
+        ScarletTurn.classList.add("opacityCheck");
+        if (playerE == "Mrs. Peacock"){
+            PeacockTurn.classList.remove("opacityCheck");
+        }
+        else if (playerE == "Pr. Plum"){
+            PlumTurn.classList.remove("opacityCheck");
+        }
+        else if (playerE == "Col. Mustard"){
+            MustardTurn.classList.remove("opacityCheck");
+        }
+        else if (playerE == "Mrs. White"){
+            WhiteTurn.classList.remove("opacityCheck");
+        }
+        else if (playerE == "Mr. Green"){
+            GreenTurn.classList.remove("opacityCheck");
+        }
+        else if (playerE == "Ms. Scarlet"){
+            ScarletTurn.classList.remove("opacityCheck");
+        }
+        aiChooseSuspect(playerE);
+    }
+    else if (totalTurnCount%6 == 5){
+        PeacockTurn.classList.add("opacityCheck");
+        PlumTurn.classList.add("opacityCheck");
+        MustardTurn.classList.add("opacityCheck");
+        WhiteTurn.classList.add("opacityCheck");
+        GreenTurn.classList.add("opacityCheck");
+        ScarletTurn.classList.add("opacityCheck");
+        if (playerF == "Mrs. Peacock"){
+            PeacockTurn.classList.remove("opacityCheck");
+        }
+        else if (playerF == "Pr. Plum"){
+            PlumTurn.classList.remove("opacityCheck");
+        }
+        else if (playerF == "Col. Mustard"){
+            MustardTurn.classList.remove("opacityCheck");
+        }
+        else if (playerF == "Mrs. White"){
+            WhiteTurn.classList.remove("opacityCheck");
+        }
+        else if (playerF == "Mr. Green"){
+            GreenTurn.classList.remove("opacityCheck");
+        }
+        else if (playerF == "Ms. Scarlet"){
+            ScarletTurn.classList.remove("opacityCheck");
+        }
+        aiChooseSuspect(playerF);
+    }
+    totalTurnCount = totalTurnCount + 1;
+    console.log("totalTurnCount =  "+ totalTurnCount);
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    nextTurnButton.classList.remove("disabled");
+    // console.log(playerA)
+}
+
 function endTurn(){
-alert("helour");
 moveHide();
 roomTwo.value = "";
 disableSuspectSelect();
 }
-function beginTurn(){
+function beginTurnA(){
 moveShow();
 disableSuspectSelect();
 }
+
+
+
+
+
+
 function moveHide(){
 blockMoveSelect.classList.add("disabled");
 blockMoveDisplay.classList.add("disabled");
