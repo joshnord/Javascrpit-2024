@@ -6,9 +6,10 @@
 
 
 
-var jeremy = "Mrs. Peacock";
-var garage = "Conservatory";
-var table = "Wrench";
+var garfunkel = "";
+
+
+var roomChoice = "";
 
 
 var bobert = 0;
@@ -32,15 +33,15 @@ var weaponSuspect = "";
 function getRandomInt(max) {
 return Math.floor(Math.random() * max + 1);
 }
-    
-    
+   
+   
 var accuseContainer = {
 person: realPerson,
 room: realRoom,
 weapon: realWeapon,
 }
-    
-    
+   
+   
 var charOne = {
 name: "White",
 number: 21,
@@ -87,98 +88,102 @@ knowledge: newCharInfo
 
 var peacock = {
 cardName: "Mrs. Peacock",
-cardNumber: 0,
+cardNumber: 0
 }
 var plum = {
 cardName: "Pr. Plum",
-cardNumber: 1,
+cardNumber: 1
 }
 var mustard = {
 cardName: "Col. Mustard",
-cardNumber: 2,
+cardNumber: 2
 }
 var white = {
 cardName: "Mrs. White",
-cardNumber: 3,
+cardNumber: 3
 }
 var green = {
 cardName: "Mr. Green",
-cardNumber: 4,
+cardNumber: 4
 }
 var scarlet = {
 cardName: "Ms. Scarlet",
-cardNumber: 5,
+cardNumber: 5
 }
 var knife = {
 cardName: "Knife",
-cardNumber: 6,
+cardNumber: 6
 }
 var leadPipe = {
 cardName: "Lead Pipe",
-cardNumber: 7,
+cardNumber: 7
 }
 var rope = {
 cardName: "Rope",
-cardNumber: 8,
+cardNumber: 8
 }
 var revolver = {
 cardName: "Revolver",
-cardNumber: 9,
+cardNumber: 9
 }
 var wrench = {
 cardName: "Wrench",
-cardNumber: 10,
+cardNumber: 10
 }
 var candlestick = {
 cardName: "Candlestick",
-cardNumber: 11,
+cardNumber: 11
 }
 var hall = {
 cardName: "Hall",
-cardNumber: 12,
+cardNumber: 12
 }
 var lounge = {
 cardName: "Lounge",
-cardNumber: 13,
+cardNumber: 13
 }
 var study = {
 cardName: "Study",
-cardNumber: 14,
+cardNumber: 14
 }
 var library = {
 cardName: "Library",
-cardNumber: 15,
+cardNumber: 15
 }
 var diningRoom = {
 cardName: "Dining Room",
-cardNumber: 16,
+cardNumber: 16
 }
 var billardsRoom = {
 cardName: "Billards Room",
-cardNumber: 17,
+cardNumber: 17
 }
 var ballroom = {
 cardName: "Ballroom",
-cardNumber: 18,
+cardNumber: 18
 }
 var conservatory = {
 cardName: "Conservatory",
-cardNumber: 19,
+cardNumber: 19
 }
 var kitchen = {
 cardName: "Kitchen",
-cardNumber: 20,
+cardNumber: 20
 }
 
 
 
 //kinda weird this is just out in the open
 //source of cards
-var deckOne = [];
-deckOne.push(peacock, plum, mustard, white, green, scarlet,
+var deckOne = [peacock, plum, mustard, white, green, scarlet,
 knife, leadPipe, rope, revolver, wrench, candlestick,
 hall, lounge, study, library, diningRoom, billardsRoom, ballroom, conservatory, kitchen
-);
+];
+// var deckOne = [];
+// deckOne.push(peacock, plum, mustard, white, green, scarlet,
+// knife, leadPipe, rope, revolver, wrench, candlestick,
+// hall, lounge, study, library, diningRoom, billardsRoom, ballroom, conservatory, kitchen
+// );
 var deckTwo = deckOne;
 for(var i = 0; i < deckOne.length; i++){
 console.log("deckOne = ", deckOne[i]);
@@ -355,9 +360,19 @@ var moveValue = "";
 
 
 
+var personChoice = "";
+var weaponChoice = "";
+
+
+var roomChoiceB = "";
+var roomChoiceC = "";
+var roomChoiceD = "";
+var roomChoiceE = "";
+var roomChoiceF = "";
+
+
 function movePlayerN(bob){
 newInfo.innerText = "";
-
 
 
 
@@ -365,11 +380,7 @@ newInfo.innerText = "";
  moveValue = getRandomInt(4);
 
 
-var roomChoiceB = (getRandomInt(9) + 11);
-var roomChoiceC = (getRandomInt(9) + 11);
-var roomChoiceD = (getRandomInt(9) + 11);
-var roomChoiceE = (getRandomInt(9) + 11);
-var roomChoiceF = (getRandomInt(9) + 11);
+
 //TODO: make roomChoice(letter) a variable which changes each turn based on info
 
 
@@ -384,6 +395,7 @@ else if(bob == 'B'){
 locationPlayer = locationPlayerB;
 playerLocation = playerLocationB;
 roomChoice = roomChoiceB;
+        // if have 8 rooms = (getRandomInt(9) + 11);
 }
 else if(bob == 'C'){
 locationPlayer = locationPlayerC;
@@ -505,56 +517,18 @@ roomSuspectSelect.innerText = playerLocationA;
     endMove();
     }
 }
-else if(bob == 'B'){
-locationPlayerB = locationPlayer;
-playerLocationB = playerLocation;
-    if (playerLocation == "Hallway"){
-    newInfo.innerText = playerB + " is in the " + "Hallway";
-    }
-    else {
-    newInfo.innerText = playerB + " is in the " + playerLocationB;
-    }
-}
-else if(bob == 'C'){
-locationPlayerC = locationPlayer;
-playerLocationC = playerLocation;
-    if (playerLocation == "Hallway"){
-    newInfo.innerText = playerC + " is in the " + "Hallway";
-    }
-    else {
-    newInfo.innerText = playerC + " is in the " + playerLocationC;
-    }
-}
-else if(bob == 'D'){
-locationPlayerD = locationPlayer;
-playerLocationD = playerLocation;
-    if (playerLocation == "Hallway"){
-    newInfo.innerText = playerD + " is in the " + "Hallway";
-    }
-    else {
-    newInfo.innerText = playerD + " is in the " + playerLocationD;
-    }
-}
-else if(bob == 'E'){
-locationPlayerE = locationPlayer;
-playerLocationE = playerLocation;
-    if (playerLocation == "Hallway"){
-    newInfo.innerText = playerE + " is in the " + "Hallway";
-    }
-    else {
-    newInfo.innerText = playerE + " is in the " + playerLocationE;
-    }
-}
-else if(bob == 'F'){
-locationPlayerF = locationPlayer;
-playerLocationF = playerLocation;
-    if (playerLocation == "Hallway"){
-    newInfo.innerText = playerF + " is in the " + "Hallway";
-    }
-    else {
-    newInfo.innerText = playerF + " is in the " + playerLocationF;
-    }
-}
+// else if(bob == 'B'){
+// locationPlayerB = locationPlayer;
+// playerLocationB = playerLocation;
+//     if (playerLocation == "Hallway"){
+//     newInfo.innerText = playerB + " is in the " + "Hallway";
+//     }
+//     else {
+//     newInfo.innerText = playerB + " is in the " + playerLocationB;
+//     aiChooseSuspect(playerB);
+//     }
+// }
+
 
 }
 
@@ -569,12 +543,11 @@ function endMove(){
 // personSuspectSelect.classList.remove("disabled");
 // roomSuspectSelect.classList.remove("disabled");
 // weaponSuspectSelect.classList.remove("disabled");
-newInfo.innerText += playerA + " is in the " + playerLocationA;
+newInfo.innerText = playerA + " is in the " + playerLocationA;
 blockSubSuspect.classList.remove("disabled");
 moveHide();
 increaseTurnCount();
 }
-
 
 
 
@@ -623,9 +596,6 @@ function playerSuspect(playerWhoseTurn){
     }
     else {
 
-        let personSuspectAI = jeremy;
-        let roomSuspectAI = garage;
-        let weaponSuspectAI = table;
         newInfo.innerText += ("\n\n" + playerWhoseTurn + " suspects " + personSuspectAI + " in the " + roomSuspectAI + " with the " + weaponSuspectAI);
 
         personSuspect = personSuspectAI;
@@ -641,9 +611,9 @@ console.log("personSuspect = " + personSuspect);
 console.log("roomSuspect = " + roomSuspect);
 console.log("weaponSuspect = " + weaponSuspect);
 
-       
-       
 
+       
+       
 for(var r = 0; r <= 5; r++){
         benjamin = playerChoiceArray[(playerXFinder + r) % 6];
         console.log("");
@@ -695,32 +665,30 @@ for(var r = 0; r <= 5; r++){
                     }
                     console.log("will push");
                         if (playerWhoseTurn == playerA){
-
-                            console.log("Deck A Before: ", deckPlayerA);
-                            console.log("pushed");
-                            deckPlayerA.push[deckQuestion[g]];
-                            //deckPlayerA = [deckThree[0], deckThree[1], deckThree[2]];
-                            console.log("Deck Question", deckQuestion);
-                            console.log("g", g);
-                            console.log("Deck Question g", deckQuestion[g]);
-                            console.log("Deck A AFter", deckPlayerA);
+                            deckPlayerA.push(deckQuestion[g]);
+                            console.log("deckPlayerA = ", deckPlayerA);
                         }
                         else if (playerWhoseTurn == playerB){
-                            deckPlayerB.push[deckQuestion[g]];
+                            deckPlayerB.push(deckQuestion[g]);
+                            console.log("deckPlayerB = ", deckPlayerB);
                         }
                         else if (playerWhoseTurn == playerC){
-                            deckPlayerC.push[deckQuestion[g].cardName];
+                            deckPlayerC.push(deckQuestion[g]);
+                            console.log("deckPlayerC = ", deckPlayerC);
                         }
                         else if (playerWhoseTurn == playerD){
-                            deckPlayerD.push[deckQuestion[g].cardName];
+                            deckPlayerD.push(deckQuestion[g]);
+                            console.log("deckPlayerD = ", deckPlayerD);
                         }
                         else if (playerWhoseTurn == playerE){
-                            deckPlayerE.push[deckQuestion[g].cardName];
+                            deckPlayerE.push(deckQuestion[g]);
+                            console.log("deckPlayerE = ", deckPlayerE);
                         }
                         else if (playerWhoseTurn == playerF){
-                            deckPlayerF.push[deckQuestion[g].cardName];
+                            deckPlayerF.push(deckQuestion[g]);
+                            console.log("deckPlayerF = ", deckPlayerF);
                         }
-                    
+                   
                 }
                 bobert = 1;
             }
@@ -768,7 +736,7 @@ console.log(accuseContainer.weapon.cardName);
 if (personSuspect == accuseContainer.person.cardName &&
 roomSuspect == accuseContainer.room.cardName &&
 weaponSuspect == accuseContainer.weapon.cardName){
-alert (" you win! " +
+alert (" YOU WIN! " +
 accuseContainer.person.cardName + " killed Mr. Body in the " + accuseContainer.room.cardName + " with the " + accuseContainer.weapon.cardName);
 }
 else {
@@ -860,3 +828,266 @@ function weaponExpand(){
 // Revolver
 // Wrench
 // Candlestick
+
+
+
+
+
+
+
+
+
+
+
+var awooga = "";
+// var
+// var
+// var
+var roomChoiceQ = "";
+
+function aiChooseSuspect(rob){
+
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+
+    deckOne = [peacock, plum, mustard, white, green, scarlet,
+    knife, leadPipe, rope, revolver, wrench, candlestick,
+    hall, lounge, study, library, diningRoom, billardsRoom, ballroom, conservatory, kitchen
+    ];
+if(rob == playerB){
+findGarfunkelRoom(deckPlayerB);
+roomChoiceB = roomChoiceQ;
+console.log("roomChoiceB = " + roomChoiceB);
+movePlayerN("B");
+
+    locationPlayerB = locationPlayer;
+    playerLocationB = playerLocation;
+        if (playerLocation == "Hallway"){
+        newInfo.innerText = playerB + " is in the " + "Hallway";
+        }
+        else {
+        newInfo.innerText = playerB + " is in the " + playerLocationB;
+        aiChooseSuspectContinue(rob);
+        }
+}
+else if(rob == playerC){
+findGarfunkelRoom(deckPlayerC);
+roomChoiceC = roomChoiceQ;
+console.log("roomChoiceC = " + roomChoiceC);
+movePlayerN("C");
+
+    locationPlayerC = locationPlayer;
+    playerLocationC = playerLocation;
+        if (playerLocation == "Hallway"){
+        newInfo.innerText = playerC + " is in the " + "Hallway";
+        }
+        else {
+        newInfo.innerText = playerC + " is in the " + playerLocationC;
+        aiChooseSuspectContinue(rob);
+        }
+}
+else if(rob == playerD){
+findGarfunkelRoom(deckPlayerD);
+roomChoiceD = roomChoiceQ;
+console.log("roomChoiceD = " + roomChoiceD);
+movePlayerN("D");
+
+    locationPlayerD = locationPlayer;
+    playerLocationD = playerLocation;
+        if (playerLocation == "Hallway"){
+        newInfo.innerText = playerD + " is in the " + "Hallway";
+        }
+        else {
+        newInfo.innerText = playerD + " is in the " + playerLocationD;
+        aiChooseSuspectContinue(rob);
+        }
+}
+else if(rob == playerE){
+findGarfunkelRoom(deckPlayerE);
+roomChoiceE = roomChoiceQ;
+console.log("roomChoiceE = " + roomChoiceE);
+movePlayerN("E");
+
+    locationPlayerE = locationPlayer;
+    playerLocationE = playerLocation;
+        if (playerLocation == "Hallway"){
+        newInfo.innerText = playerE + " is in the " + "Hallway";
+        }
+        else {
+        newInfo.innerText = playerE + " is in the " + playerLocationE;
+        aiChooseSuspectContinue(rob);
+        }
+}
+else if(rob == playerF){
+findGarfunkelRoom(deckPlayerF);
+roomChoiceF = roomChoiceQ;
+console.log("roomChoiceF = " + roomChoiceF);
+movePlayerN("F");
+
+    locationPlayerF = locationPlayer;
+    playerLocationF = playerLocation;
+        if (playerLocation == "Hallway"){
+        newInfo.innerText = playerF + " is in the " + "Hallway";
+        }
+        else {
+        newInfo.innerText = playerF + " is in the " + playerLocationF;
+        aiChooseSuspectContinue(rob);
+        }
+}
+   
+}
+
+
+function aiChooseSuspectContinue(rob){
+if(rob == playerB){
+    findGarfunkelPerson(deckPlayerB);
+    personChoice = garfunkel;
+    findGarfunkelWeapon(deckPlayerB);
+    weaponChoice = garfunkel;
+}
+else if(rob == playerC){
+    findGarfunkelPerson(deckPlayerC);
+    personChoice = garfunkel;
+    findGarfunkelWeapon(deckPlayerC);
+    weaponChoice = garfunkel;
+}
+else if(rob == playerD){
+    findGarfunkelPerson(deckPlayerD);
+    personChoice = garfunkel;
+    findGarfunkelWeapon(deckPlayerD);
+    weaponChoice = garfunkel;
+}
+else if(rob == playerE){
+    findGarfunkelPerson(deckPlayerE);
+    personChoice = garfunkel;
+    findGarfunkelWeapon(deckPlayerE);
+    weaponChoice = garfunkel;
+}
+else if(rob == playerF){
+    findGarfunkelPerson(deckPlayerF);
+    personChoice = garfunkel;
+    findGarfunkelWeapon(deckPlayerF);
+    weaponChoice = garfunkel;
+}
+
+
+console.log("weaponChoice = " + weaponChoice);
+console.log("personChoice = " + personChoice);
+console.log("roomChoice = " + roomChoice);
+roomSuspectAI = playerLocation;
+personSuspectAI = deckOne[personChoice].cardName;
+weaponSuspectAI = deckOne[weaponChoice].cardName;
+
+
+newInfo.innerText = rob + " is in the " + playerLocation;
+console.log("personSuspectAI, weaponSuspectAI, roomSuspectAI = " +
+    personSuspectAI, weaponSuspectAI, roomSuspectAI);
+playerSuspect(rob);
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function findGarfunkelRoom(gladys){
+console.log("findGarfunkelRoom")
+    let oof = getRandomInt(21);
+    garfunkel = "";
+        for(var jared = 0; jared <= 20; jared++){
+            let gorgon = 0;
+            for (var h = gladys.length - 1; h >= 0; h--){ ////////////////////////////////////////////////////////////////
+                awooga = gladys[h];
+                    console.log("h = " + h);
+                    console.log("awooga = " , awooga);
+                    console.log(deckOne[(jared + oof) % 21]);
+                if (deckOne[(jared + oof) % 21] == awooga){
+                gorgon = 5;
+                }
+            }
+                console.log("gorgon = " + gorgon);
+            if(gorgon != 5 && 11 < ((jared + oof) % 21) && ((jared + oof) % 21) < 21){
+                console.log("WOW!");
+                console.log(((jared + oof) % 21) + " -- ((jared + oof) % 21)");
+                garfunkel = ((jared + oof) % 21);
+                console.log("garf = " + garfunkel);
+            }
+        }
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    roomChoiceQ = garfunkel;
+    console.log(deckPlayerB);
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+}
+
+
+function findGarfunkelWeapon(gladys){
+console.log("findGarfunkelRoom")
+    let oof = getRandomInt(21);
+    garfunkel = "";
+        for(var jared = 0; jared <= 20; jared++){
+            let gorgon = 0;
+            for (var h = gladys.length - 1; h >= 0; h--){ ////////////////////////////////////////////////////////////////
+                awooga = gladys[h];
+                    console.log("h = " + h);
+                    console.log("awooga = " , awooga);
+                    console.log(deckOne[(jared + oof) % 21]);
+                if (deckOne[(jared + oof) % 21] == awooga){
+                gorgon = 5;
+                }
+            }
+                console.log("gorgon = " + gorgon);
+            if(gorgon != 5 && 5 < ((jared + oof) % 21) && ((jared + oof) % 21) < 12){
+                console.log("WOW!");
+                console.log(((jared + oof) % 21) + " -- ((jared + oof) % 21)");
+                garfunkel = ((jared + oof) % 21);
+                console.log("garf = " + garfunkel);
+            }
+        }
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    // roomChoiceQ = garfunkel;
+    console.log(deckPlayerB);
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+}
+
+
+function findGarfunkelPerson(gladys){
+console.log("findGarfunkelRoom")
+    let oof = getRandomInt(21);
+    garfunkel = "";
+        for(var jared = 0; jared <= 20; jared++){
+            let gorgon = 0;
+            for (var h = gladys.length - 1; h >= 0; h--){ ////////////////////////////////////////////////////////////////
+                awooga = gladys[h];
+                    console.log("h = " + h);
+                    console.log("awooga = " , awooga);
+                    console.log(deckOne[(jared + oof) % 21]);
+                if (deckOne[(jared + oof) % 21] == awooga){
+                gorgon = 5;
+                }
+            }
+                console.log("gorgon = " + gorgon);
+            if(gorgon != 5 && -1 < ((jared + oof) % 21) && ((jared + oof) % 21) < 6){
+                console.log("WOW!");
+                console.log(((jared + oof) % 21) + " -- ((jared + oof) % 21)");
+                garfunkel = ((jared + oof) % 21);
+                console.log("garf = " + garfunkel);
+            }
+        }
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    // roomChoiceQ = garfunkel;
+    console.log(deckPlayerB);
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+    console.log("");console.log("");console.log("");console.log("");console.log("");
+}
